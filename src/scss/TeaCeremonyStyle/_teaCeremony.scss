@@ -1,0 +1,6 @@
+.tea-ceremony {
+    &__block {
+        @include flex-jc;
+        @include flex-fd;
+    }
+}

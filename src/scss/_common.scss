@@ -1,0 +1,96 @@
+//BASIC ============================
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    @include font-roboto-r;
+    background-color: $color-e;
+    hyphens: auto;
+    text-align: justify;
+    cursor: url('/img/cursor.png'), auto;
+    overflow-x: hidden;
+}
+
+h1 {
+    @include font-china;
+    text-align: center;
+    margin-bottom: $margin-bottom-small;
+    font-size: $font-size-h1;
+}
+
+h2 {
+    text-align: center;
+    font-size: $font-size-h2;
+    margin: $margin;
+}
+
+h3 {
+    font-size: $font-size-h3;
+    margin: $margin;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    // height: 100vh;
+}
+
+.main {
+    @include flex-jc;
+    @include flex-fd;
+    justify-content: flex-start;
+    width: $width-main;
+
+    margin: 0 auto;
+
+    position: relative;
+
+    padding-bottom: 1.5rem;
+    gap: 5rem;
+
+    min-height: 700px;
+}
+
+//ADDITIONAL ============================
+
+.text {
+    padding: 1.5vh;
+    font-size: $font-size-main;
+}
+
+.text-bold {    
+    font-weight: bold;
+}
+
+.text-italic {
+    font-style: italic;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-red {
+    color: red;
+}
+
+.text-green {
+    color: green;
+}
+
+.text-white {
+    color: white;
+}
+
