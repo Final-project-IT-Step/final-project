@@ -1,29 +1,56 @@
 @media (max-width: 1235px) {
-
+    
 }
 
 @media (max-width: 1200px) {
-
 }
 
 @media (max-width: 1150px) {
-
+    .light-box {
+        top: -210vw;
+    }
 }
 
 @media (max-width: 992px) {
     
 }
 
-@media (max-width: 768px) {
+@media (max-width: 930px) {
+    .principles-tea-ceremony__block {
+        height: 300px;
+    }
 
+    .light-box {
+        top: -210vw;
+    }
+}
+
+@media (max-width: 768px) {
+    .light-box {
+        top: -235vw;
+    }
+}
+
+@media (max-width: 650px) {
+    .light-box {
+        top: -250vw;
+    }
 }
 
 @media (max-width: 607px) {
-
+    .principles-tea-ceremony__block {
+        height: 210px;
+    }
 }
 
 @media (max-width: 576px) {
+    .principles-tea-ceremony__box-light {
+        display: none;
+    }
 
+    .principles-tea-ceremony__block {
+        height: 100px;
+    }
 }
 
 @media (max-width: 457px) {

@@ -1,6 +1,32 @@
 .tea-ceremony {
+    @include flex-fd;
+
     &__block {
         @include flex-jc;
         @include flex-fd;
+        margin-bottom: $margin-bottom;
+    } 
+
+    &__img {
+        width: 70vw;
+    }
+
+    &__info {
+        width: 57vw;
+        height: auto;
+        padding: 35px;
+        margin-bottom: 15px;
+        background-color: $color-i;
+        border-radius: 15px;
+    }
+}
+
+.steps-tea-ceremony {
+    @include flex-fd;
+}
+
+.tableware {
+    &__img {
+        width: 30vw;
     }
 }
