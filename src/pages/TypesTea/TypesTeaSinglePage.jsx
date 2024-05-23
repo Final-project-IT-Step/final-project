@@ -1,11 +1,13 @@
 import { typeTeaList } from "./typesTeaList";
 import { useGetCurrentTea } from "../../components/TypeTea/hooks/useGetCurrentTea";
+import { Page404 } from "../Page404";
 
 export const TypesTeaSinglePage = () => {
-    const { filteredData:selectedTea } = useGetCurrentTea();
+    const { filteredData:selectedTea = {}, isLoading } = useGetCurrentTea();
 
     return (
-        <div className='type-tea__info-block'>
+        Object.keys(selectedTea).length && !isLoading
+        ? <div className='type-tea__info-block'>
             <h2 className='type-tea__title'>{selectedTea.typeTea}</h2>
             <ul className='type-tea__list'>
                 { typeTeaList.map(tea => {
@@ -25,5 +27,6 @@ export const TypesTeaSinglePage = () => {
                 }
             </ul>
         </div>
+        : <Page404 />
     )
 }

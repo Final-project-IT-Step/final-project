@@ -211,6 +211,23 @@
 }  
 
 //MENU =================
+.header-box {
+    @include flex-jc;
+    position: relative;
+}
+
+.authorization-box {
+    @include flex-jc;
+    position: absolute;
+    top: 8.5%;
+    right: 10%;
+
+    width: 60px;
+    height: 60px;
+
+    border: 2px solid #9a8865;
+    border-radius: 50%;
+}
 
 .menu {
     width: 85vw;

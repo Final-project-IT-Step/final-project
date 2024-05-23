@@ -115,6 +115,7 @@
       "end": "Китайська чайна церемонія — це більше ніж просто традиція заварювання чаю. Це втілення філософії, культури та мистецтва, які передавалися з покоління в покоління, зберігаючи свою актуальність і значення до сьогоднішнього дня."
     }
   ],
+<<<<<<< HEAD
   "adviceSage": [
     {
       "id": "1",
@@ -490,6 +491,120 @@
       "id": "75",
       "text": "Навіть коли падаєш, дивись вперед. Навіть коли ми стикаємося з невдачами, важливо не втрачати з поля зору свої цілі та продовжувати рухатися вперед.",
       "type": "труднощі"
+=======
+  "comments": [
+    {
+      "id": "1",
+      "userId": "1",
+      "text": "Hello world1",
+      "totalLikes": 120,
+      "totalDislikes": 10
+    },
+    {
+      "id": "2",
+      "userId": "2",
+      "text": "Hello world2",
+      "totalLikes": 10,
+      "totalDislikes": 5
+    },
+    {
+      "id": "3",
+      "userId": "3",
+      "text": "Hello world3",
+      "totalLikes": 10,
+      "totalDislikes": 5
+    },
+    {
+      "id": "4",
+      "userId": "4",
+      "text": "Hello world4",
+      "totalLikes": 10,
+      "totalDislikes": 5
+    },
+    {
+      "id": "5",
+      "userId": "5",
+      "text": "Hello world1",
+      "totalLikes": 10,
+      "totalDislikes": 5
+    },
+    {
+      "id": "6",
+      "userId": "6",
+      "text": "Hello world2",
+      "totalLikes": 10,
+      "totalDislikes": 6
+    },
+    {
+      "id": "7",
+      "userId": "7",
+      "text": "Hello world3",
+      "totalLikes": 10,
+      "totalDislikes": 5
+    },
+    {
+      "id": "8",
+      "userId": "8",
+      "text": "Hello world4",
+      "totalLikes": 10,
+      "totalDislikes": 5
+    },
+    {
+      "id": "9",
+      "userId": "9",
+      "text": "Hello world1",
+      "totalLikes": 10,
+      "totalDislikes": 8
+    },
+    {
+      "id": "10",
+      "userId": "10",
+      "text": "Hello world2",
+      "totalLikes": 10,
+      "totalDislikes": 5
+    },
+    {
+      "id": "11",
+      "userId": "11",
+      "text": "Hello world3",
+      "totalLikes": 10,
+      "totalDislikes": 5
+    },
+    {
+      "id": "12",
+      "userId": "12",
+      "text": "Hello world4",
+      "totalLikes": 10,
+      "totalDislikes": 5
+    },
+    {
+      "id": "13",
+      "userId": "13",
+      "text": "Hello world1",
+      "totalLikes": 10,
+      "totalDislikes": 5
+    },
+    {
+      "id": "14",
+      "userId": "14",
+      "text": "Hello world2",
+      "totalLikes": 10,
+      "totalDislikes": 5
+    },
+    {
+      "id": "15",
+      "userId": "15",
+      "text": "Hello world3",
+      "totalLikes": 10,
+      "totalDislikes": 5
+    },
+    {
+      "id": "16",
+      "userId": "16",
+      "text": "Hello world4",
+      "totalLikes": 10,
+      "totalDislikes": 5
+>>>>>>> ebb250e3014717b71c9f8b746c1f939ac58c4561
     }
   ]
 }

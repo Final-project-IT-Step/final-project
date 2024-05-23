@@ -114,3 +114,13 @@
     text-align: justify;
     hyphens: auto;
 }
+
+@mixin vignette-text {
+    width: 57vw;
+    background-color: #edd5a7;
+    height: auto;
+}
+
+@mixin vignette-wd {
+    width: 70vw;
+}

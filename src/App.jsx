@@ -3,6 +3,7 @@ import Home from "./pages/Home";
 import TeaCeremony from "./pages/TeaCeremony";
 import { HistoryTea, Page404, TypesTea, TypesTeaSinglePage, WisdomTea } from "./pages";
 import Layout from "./components/Layout";
+import { AuthorizationPage } from "./pages/AuthorizationPage";
 
 const App = () => {
 
@@ -16,6 +17,7 @@ const App = () => {
         </Route>
         <Route path="ceremony" element={ <TeaCeremony /> } />
         <Route path="wisdom" element={ <WisdomTea /> } />
+        <Route path="login" element={ <AuthorizationPage /> } />
         <Route path="*" element={ <Page404 /> } />
       </Route>
     </Routes>
