@@ -1,6 +1,21 @@
 .footer {
-    height: 250px;
-    width: 100vw;
     margin-top: auto;
-    background-color: $color-c;
+    position: relative;
+
+    &__img {
+        width: 100vw;
+        height: auto;
+    }
+
+    &__contacts {
+        width: 370px;
+        padding: 25px;
+        line-height: 25px;
+        background-color: rgba(255, 255, 255, 0.8);        
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        position: absolute;
+        bottom: 50px;
+        left: 15%;
+    }
 }

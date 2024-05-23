@@ -37,51 +37,23 @@ export const PrinciplesCeremony = () => {
                 </div>
             </div>
 
-            <div className="principles-tea-ceremony__box-light">
-                <div className="light-box object-a">
-                    <div className="ball item">
-                        <div className="circle"></div>
-                        <div className="circle"></div>
-                        <div className="circle"></div>
-                        <div className="circle"></div>
-                        <div className="circle"></div>
-                        <div className="circle"></div>
-                    </div>
+            <div class="orb-container">
+                <div class="glowing-orb">
+                    <div class="particles"></div>
                 </div>
 
-                <div className="light-box object-b">
-                    <div className="ball item">
-                        <div className="circle"></div>
-                        <div className="circle"></div>
-                        <div className="circle"></div>
-                        <div className="circle"></div>
-                        <div className="circle"></div>
-                        <div className="circle"></div>
-                    </div>
+                <div class="glowing-orb">
+                    <div class="particles"></div>
                 </div>
 
-                <div className="light-box object-c">
-                    <div className="ball item">
-                        <div className="circle"></div>
-                        <div className="circle"></div>
-                        <div className="circle"></div>
-                        <div className="circle"></div>
-                        <div className="circle"></div>
-                        <div className="circle"></div>
-                    </div>
+                <div class="glowing-orb">
+                    <div class="particles"></div>
                 </div>
-
-                <div className="light-box object-d">
-                    <div className="ball item">
-                        <div className="circle"></div>
-                        <div className="circle"></div>
-                        <div className="circle"></div>
-                        <div className="circle"></div>
-                        <div className="circle"></div>
-                        <div className="circle"></div>
-                    </div>
+                
+                <div class="glowing-orb">
+                    <div class="particles"></div>
                 </div>
-            </div>
+            </div>            
         </div>
     );
 };

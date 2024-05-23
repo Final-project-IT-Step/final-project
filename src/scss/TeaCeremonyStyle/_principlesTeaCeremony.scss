@@ -2,7 +2,7 @@
     &__block {
         @include flex-jc(center, flex-start);
         width: 100%;
-        height: 410px;
+        height: 210px;
 
         &_title {
             @include flex-jc(space-between, flex-start);
@@ -15,120 +15,79 @@
     }
 }
 
-.light-box {
-    position: absolute;  
-    perspective: 400;
-    top: -197vw;
-    right: 0;
-    bottom: 0;
+.orb-container {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto 100px;
+    width: 85%;
+    gap: 20px;
 }
 
-.object-a {
-    left: -53vw;
+.glowing-orb {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgb(0 255 249 / 50%), rgba(0, 0, 0, 0));
+    box-shadow: 0 0 20px rgb(32 209 181 / 80%), 0 0 40px rgb(0 247 255 / 60%), 0 0 60px rgb(0 240 255 / 40%);
+    animation: glow 2s infinite alternate;
+    overflow: hidden;
 }
 
-.object-b {
-    left: -17vw;
+@keyframes glow {
+    0% {
+        box-shadow: 0 0 10px rgba(0, 255, 149, 0.8), 0 0 20px rgba(0, 255, 157, 0.6), 0 0 30px rgba(0, 255, 200, 0.4);
+        background: radial-gradient(circle, rgba(0, 255, 157, 0.5), rgba(0, 0, 0, 0));
+    }
+    100% {
+        box-shadow: 0 0 30px rgb(255, 251, 0), 0 0 60px rgba(251, 255, 0, 0.8), 0 0 90px rgba(217, 255, 0, 0.6);
+        background: radial-gradient(circle, rgba(208, 255, 0, 0.7), rgba(0, 0, 0, 0));
+    }
 }
 
-.object-c {
-    left: 17vw;
-}
-
-.object-d {
-    left: 53vw;
-}
-  
-.ball {
-    width: 10vw;
-    height: 10vw;
-    transform-style: preserve-3d;
-}
-
-.ball.item {
+.particles {
     position: absolute;
     top: 0;
     left: 0;
-    right: 0;
-    bottom: 0;
-    margin: auto;
-    transform: rotateX(60deg) rotateZ(-30deg);
-    -webkit-animation: rotate 20s infinite linear;
-        animation: rotate 20s infinite linear;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
 }
 
-.ball.item .circle {
-    // width: 120px;
-    // height: 120px;
-    width: 10vw;
-    height: 10vw;
+.particles::before, .particles::after {
+    content: '';
     position: absolute;
-    transform-style: preserve-3d;
-    border-radius: 100%;
-    box-sizing: border-box;
-    box-shadow: 0 0 60px #82c100, inset 0 0 60px #338d0d;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.8);
+    animation: particleMotion 4s infinite;
 }
 
-.ball.item .circle::before, 
-.ball.item .circle::after {
-    content: "";
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    margin: auto;
-    width: 10%;
-    height: 10%;
-    border-radius: 100%;
-    background: #338d0d;
-    box-sizing: border-box;
-    box-shadow: 0 0 60px 2px #338d0d;
+.particles::before {
+    left: 20%;
+    animation-delay: 0s;
 }
 
-.ball.item .circle::before {
-    transform: translateZ(-90px);
+.particles::after {
+    left: 80%;
+    animation-delay: 2s;
 }
 
-.ball.item .circle::after {
-    transform: translateZ(90px);
-}
-
-.ball.item .circle:nth-child(1) {
-    transform: rotateZ(72deg) rotateX(63.435deg);
-}
-
-.ball.item .circle:nth-child(2) {
-    transform: rotateZ(144deg) rotateX(63.435deg);
-}
-
-.ball.item .circle:nth-child(3) {
-    transform: rotateZ(216deg) rotateX(63.435deg);
-}
-
-.ball.item .circle:nth-child(4) {
-    transform: rotateZ(288deg) rotateX(63.435deg);
-}
-
-.ball.item .circle:nth-child(5) {
-    transform: rotateZ(360deg) rotateX(63.435deg);
-}
-
-@-webkit-keyframes rotate {
+@keyframes particleMotion {
     0% {
-        transform: rotateX(0) rotateY(0) rotateZ(0);
+        transform: translateY(0) scale(1);
+    }
+    25% {
+        transform: translateY(-50px) translateX(20px) scale(1.2);
+    }
+    50% {
+        transform: translateY(-100px) translateX(-20px) scale(1);
+    }
+    75% {
+        transform: translateY(-150px) translateX(10px) scale(0.8);
     }
     100% {
-        transform: rotateX(0deg) rotateY(360deg) rotateZ(0deg);
-    }
-}
-
-@keyframes rotate {
-    0% {
-        transform: rotateX(0) rotateY(0) rotateZ(0);
-    }
-    100% {
-        transform: rotateX(0deg) rotateY(360deg) rotateZ(0deg);
+        transform: translateY(-200px) translateX(-10px) scale(1);
     }
 }

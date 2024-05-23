@@ -1,14 +1,12 @@
 import { NavLink } from "react-router-dom";
-import imgHead from '../img/head.jpg';
+import { HeadAnimation } from "./Head/HeadAnimation";
 
 export const Header = () => {
     const isActiveCallback = ({ isActive }) => isActive ? "menu__link menu__link_active" : "menu__link";
 
     return (
         <header className="header">
-            <div className="header__wrapper">
-                <img src={ imgHead } alt="" className="header__img" />
-            </div>
+            <HeadAnimation />
 
             <nav className="menu">
                 <ul className="menu__list">

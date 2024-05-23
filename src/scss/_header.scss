@@ -3,9 +3,214 @@
     z-index: 1;
 
     &__img {
-        width: 100vw;
+        width: 100vw;        
+    }
+
+    &__site-title-wrapper {
+        @include flex-jc;
+        width: 100%;
+        height: 250px;
+        position: absolute;
+        top: 25px;
+        left: 0;
+        z-index: 11;
+        opacity: 0;
+        animation: fadeIn 2s ease-out forwards 1s;
+        animation-play-state: paused;
+    }
+
+    &__site-title {
+        @include font-comforter-r;
+        font-size: 150px;
+        color: white;
+        text-shadow: 
+        -1px -1px 0 #573d07,  
+        1px -1px 0 #573d07,
+        -1px 1px 0 #573d07,
+        1px 1px 0 #573d07,
+        -2px -2px 0 #573d07,
+        2px -2px 0 #573d07,
+        -2px 2px 0 #573d07,
+        2px 2px 0 #573d07;
+    }
+
+    &__img-man {
+        height: 75%;
+        position: absolute;
+        bottom: 0;
+        left: 170px;
+        z-index: 10;
+        animation: slideInFromLeft 2s ease-out forwards;
+        animation-play-state: paused;
+    }
+
+    &__img-woman {
+        height: 70%;
+        position: absolute;
+        bottom: 0;
+        right: 170px;
+        z-index: 10;
+        animation: slideInFromRight 2s ease-out forwards;
+        animation-play-state: paused;
+    }
+
+    &__greeting {
+        @include flex-fd;
+        width: 100%;
+        position: absolute; 
+        bottom: 45%;        
+    }
+
+    &__greeting-box {
+        width: 370px;
+        padding: 25px;
+        background-color: rgba(255, 255, 255, 0.8);        
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        opacity: 0;
+        animation: fadeIn 1s ease-out forwards;
+        animation-play-state: paused;
+        position: absolute;
+
+        &_man {
+            left: 31%;
+            transform: translateY(-50%);
+        }
+    
+        &_woman {
+            left: 47%;
+            transform: translateY(-50%);
+        }
     }
 }
+
+@keyframes slideInFromLeft {
+    0% {
+        transform: translateX(-100%);
+        opacity: 1;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInFromRight {
+    0% {
+        transform: translateX(100%);
+        opacity: 1;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+//SLIDER ===============
+
+.slider {
+    @include flex-fd;    
+    width: 100%;
+    height: 350px;
+    position: absolute;
+    
+    &__container {
+        @include flex-fd (flex-start, center);
+        width: 370px;
+        height: 100%;
+        padding: 25px;
+        background-color: rgba(255, 255, 255, 0.8);        
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        opacity: 0;
+        position: absolute;
+        animation: fadeIn 1s ease-out forwards;
+    }
+
+    &__content {
+        padding: 20px;
+    }
+
+    &__description {
+        font-size: 18px;
+    }
+  
+    &__navigation {
+        position: absolute;
+        bottom: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    &__prev,
+    &__next {
+        background-color: transparent;
+        border: none;
+        font-size: 24px;
+        padding: 10px;
+        cursor: url('/img/cursor-hand.png'), pointer;
+    }
+    
+    &__dots {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 10px;
+    }
+    
+    &__dot {
+        width: 10px;
+        height: 10px;
+        background-color: #ccc;
+        border-radius: 50%;
+        margin: 0 5px;
+        cursor: url('/img/cursor-hand.png'), pointer;
+
+        &_active {
+            background-color: #333;
+        }
+    }
+    
+    &__skip {
+        background-color: #333;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        position: absolute;
+        bottom: -50px;
+        opacity: 0;
+        cursor: url('/img/cursor-hand.png'), pointer;
+        animation: fadeIn 1s ease-out forwards;
+
+        &:hover {
+            background-color: #555;
+        }
+    }
+}  
+
+//MENU =================
 
 .menu {
     width: 85vw;
@@ -13,16 +218,12 @@
     border-top: 1px solid ;
     margin-top: 15px;
     margin-bottom: 100px;
-    // position: absolute;
-    // top: 90vh;
-    // left: 12%;
 
     &__list {
         @include flex-jc;
     }
 
     &__link {
-        // @include font-china;
         @include flex-jc;
         text-align: center;
         font-size: 1.5vw;
@@ -39,11 +240,177 @@
             border-color: $color-c;
             background-color: $color-c;
             color: white;
-        }
-
-        &__item {
-            
+            pointer-events: none;
         }
     }    
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// .header {
+//     position: relative;
+//     z-index: 1;
+
+//     &__img {
+//         width: 100vw;        
+//     }
+
+//     &__site-title-wrapper {
+//         @include flex-jc;
+//         width: 100%;
+//         height: 250px;
+//         position: absolute;
+//         top: 25px;
+//         left: 0;
+//         z-index: 11;
+//         opacity: 0;
+//         animation: fadeIn 2s ease-out forwards 1s;
+//         animation-play-state: paused;
+//     }
+
+//     &__site-title {
+//         @include font-comforter-r;
+//         font-size: 150px;
+//         color: white;
+//         text-shadow: 
+//         -1px -1px 0 #573d07,  
+//         1px -1px 0 #573d07,
+//         -1px 1px 0 #573d07,
+//         1px 1px 0 #573d07,
+//         -2px -2px 0 #573d07,
+//         2px -2px 0 #573d07,
+//         -2px 2px 0 #573d07,
+//         2px 2px 0 #573d07;
+//     }
+
+//     &__img-man {
+//         height: 75%;
+//         position: absolute;
+//         bottom: 0;
+//         left: 170px;
+//         z-index: 10;
+//         animation: slideInFromLeft 2s ease-out forwards;
+//         animation-play-state: paused;
+//     }
+
+//     &__img-woman {
+//         height: 70%;
+//         position: absolute;
+//         bottom: 0;
+//         right: 170px;
+//         z-index: 10;
+//         animation: slideInFromRight 2s ease-out forwards;
+//         animation-play-state: paused;
+//     }
+
+//     &__greeting {
+//         @include flex-fd;
+//         width: 100%;
+//         height: 150px;  
+//         position: absolute; 
+//         bottom: 35%;     
+
+//         &_box {
+//             width: 370px;
+//             padding: 25px;
+//             background-color: rgba(255, 255, 255, 0.8);        
+//             border-radius: 10px;
+//             box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+//         }
+
+//         &_text {
+
+//         }
+//     }
+// }
+
+// .menu {
+//     width: 85vw;
+//     margin: 0 auto;
+//     border-top: 1px solid ;
+//     margin-top: 15px;
+//     margin-bottom: 100px;
+
+//     &__list {
+//         @include flex-jc;
+//     }
+
+//     &__link {
+//         @include flex-jc;
+//         text-align: center;
+//         font-size: 1.5vw;
+//         padding:  15px;
+//         color: black;
+//         text-decoration: none;
+//         border: 2px solid transparent;
+
+//         &:hover {
+//             border-color: $color-c;
+//         }
+        
+//         &_active {
+//             border-color: $color-c;
+//             background-color: $color-c;
+//             color: white;
+//             pointer-events: none;
+//         }
+//     }    
+// }
+
+// @keyframes slideInFromLeft {
+//     0% {
+//         transform: translateX(-100%);
+//         opacity: 1;
+//     }
+//     100% {
+//         transform: translateX(0);
+//         opacity: 1;
+//     }
+// }
+
+// @keyframes slideInFromRight {
+//     0% {
+//         transform: translateX(100%);
+//         opacity: 1;
+//     }
+//     100% {
+//         transform: translateX(0);
+//         opacity: 1;
+//     }
+// }
+
+// @keyframes fadeIn {
+//     0% {
+//         opacity: 0;
+//     }
+//     100% {
+//         opacity: 1;
+//     }
+// }

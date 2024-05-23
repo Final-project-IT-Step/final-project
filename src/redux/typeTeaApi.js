@@ -22,32 +22,7 @@ export const typeTeaApi = createApi({
             ),
         }),
 
-        addTypeTea: build.mutation({
-            query: (body) => ({
-                url: 'typeTea',
-                method: 'POST',
-                body,
-            }),
-            invalidatesTags: [ typeTeaTagObj ]
-        }),
-
-        delTypeTea: build.mutation({
-            query: (id) => ({
-                url: `typeTea/${id}`,
-                method: 'DELETE',
-            }),
-            invalidatesTags: (result, error, { id }) => [{ type: 'TypeTea', id }],
-        }),
-
-        editTypeTea: build.mutation({
-            query: ({ id, ...body }) => ({
-                url: `typeTea/${id}`,
-                method: 'PATCH',
-                body,
-            }),
-            invalidatesTags: (result, error, { id }) => [{ type: 'TypeTea', id }],
-        }),
     }),
 });
 
-export const { useGetTypeTeaQuery, useAddTypeTeaMutation, useDelTypeTeaMutation, useEditTypeTeaMutation } = typeTeaApi;
+export const { useGetTypeTeaQuery } = typeTeaApi;
