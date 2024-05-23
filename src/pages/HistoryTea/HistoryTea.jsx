@@ -1,5 +1,6 @@
 import React from 'react';
 import { useGetHistoryTeaDataQuery } from '../../redux/historyTeaDataApi';
+import { Vignette } from '../../components/Vignette';
 
 export const HistoryTea = () => {
     const { data = [] } = useGetHistoryTeaDataQuery();
@@ -16,9 +17,7 @@ export const HistoryTea = () => {
                             <React.Fragment key = { id }>
                                 { start && <p className="history-tea__info text">{ start }</p> }
                                 <div className="container">
-                                    <div className="image">
-                                        <img src={process.env.PUBLIC_URL + 'img/vignette.png'} alt="" className="image__src" />
-                                    </div>
+                                    <Vignette />
                                     <div className="content-block">
                                         <h2>{ title }</h2>
                                         <p className="history-tea__info text">{ text }</p>

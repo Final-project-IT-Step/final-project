@@ -1,0 +1,147 @@
+.comments {
+    @include flex-jc;
+    flex-direction: column;
+    width: 100%;
+}
+
+.content-block_comments {
+    @include flex-jc(flex-start, flex-start);
+    flex-direction: column;
+    width: 100%;
+    padding: 1rem;
+
+    gap: 2rem;
+
+    border-radius: .6rem;
+    max-height: 525px;
+    min-height: 525px;
+    overflow-y: auto;
+
+    &::-webkit-scrollbar {
+        background: #edd5a7;
+        border-top-right-radius: .6rem;
+        border-bottom-right-radius: .6rem;
+        width: 10px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background: #9a8865;
+        border-top-right-radius: .6rem;
+        border-bottom-right-radius: .6rem;
+    }
+}
+
+.comment {
+    @include flex-jc(flex-start);
+    padding: 1rem;
+    border: 1px solid #9a8865;
+    width: 100%;
+
+    color: #9a8865;
+
+    gap: 2rem;
+}
+
+.comment-rate {
+    @include flex-jc;
+    gap: 1rem;
+    margin-left: auto;
+
+    &__button {
+        padding: .5rem;
+        border-radius: .6rem;
+        border: none;
+        background: #9a8865;
+        color: #edd5a7;
+        cursor: pointer;
+    }
+}
+
+.rate-box {
+    @include flex-jc;
+    flex-direction: column;
+    gap: .4rem;
+}
+
+.pagination {
+    @include flex-jc(space-between);
+    width: 65%;
+}
+
+.pagination__btn {
+    background: #9a8865;
+    border-radius: .5rem;
+    color: #edd5a7;
+    border: 1px solid #edd5a7;
+    padding: .8rem;
+
+    transition: all .3s;
+    cursor: pointer;
+
+    &:disabled {
+        opacity: .6;
+    }
+}
+
+.pagination-box {
+    @include flex-jc;
+    gap: 1rem;
+    margin-top: .5rem;
+
+    &__value {
+        background: #edd5a7;
+        border-radius: .5rem;
+        color: #9a8865;
+        outline: none;
+        border: none;
+
+        padding: .8rem;
+        cursor: pointer;
+
+        &_active {
+            color: #edd5a7;
+            background: #9a8865;
+        }
+    }
+}
+
+.write-comment {
+    @include flex-jc;
+    flex-direction: column;
+    @include vignette-text;
+
+    gap: 2rem;
+    margin-top: .5rem;
+
+    padding:  1rem 0;
+
+    &__title {
+        color: #9a8865;
+    }
+
+    &__text {
+        resize: vertical;
+        width: 65%;
+
+        color: #edd5a7;
+        padding: .5rem 1.5rem;
+        background: #9a8865;
+        border-radius: .7rem;
+        min-height: 125px;
+
+        font-size: 1.1rem;
+
+        outline: none;
+        cursor: default;
+    }
+
+    &__btn {
+        width: 10%;
+        padding: .5rem;
+        border-radius: .6rem;
+        border: none;
+        background: #9a8865;
+        color: #edd5a7;
+        cursor: pointer;
+    }
+}

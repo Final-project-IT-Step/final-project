@@ -1,0 +1,99 @@
+.authorization-form {
+    @include vignette-text;
+    @include flex-jc;
+    flex-direction: column;
+    gap: 1rem;
+
+    padding: 1rem;
+    border-radius: 1rem;
+    width: 100%;
+    height: 350px;
+
+    position: relative;
+}
+
+.authorization-form-image {
+    width: 200px;
+    height: 200px;
+
+    &__src {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+
+        border: 2px solid #9a8865;
+        border-radius: 50%;
+    }
+
+    &_left, &_right {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    &_left {
+        left: 30px;
+    }
+
+    &_right {
+        right: 30px;
+    }
+}
+
+.authorization-form-label {
+    @include flex-jc(center, flex-start);
+    flex-direction: column;
+    gap: .6rem;
+    position: relative;
+    width: 50%;
+
+    &__title {
+        color: #9a8865;
+    }
+
+    &__input {
+        font-size: 1.1rem;
+        width: 100%;
+        padding: 1rem;
+
+        cursor: default;
+    }
+
+    &__switch-btn {
+        position: absolute;
+        top: 70%;
+        right: -20px;
+        transform: translate(-50%, -50%);
+        width: 45px;
+        font-size: 1.4rem;
+        padding: .5rem;
+        
+        cursor: pointer;
+    }
+
+    &__input, &__switch-btn {
+        background: #9a8865;
+        color: #edd5a7;
+        border-radius: .6rem;
+        outline: none;
+        border: none;
+    }
+}
+
+.authorization-options {
+    @include flex-jc;
+    gap: 2rem;
+
+    &__button {
+        background: #9a8865;
+        color: #edd5a7;
+        border-radius: .6rem;
+        outline: none;
+        border: none;
+
+        padding: .5rem;
+
+        width: 165px;
+        font-size: 1.1rem;
+    }
+}

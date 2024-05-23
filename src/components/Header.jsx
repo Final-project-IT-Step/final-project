@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import imgHead from '../img/head.jpg';
 
 export const Header = () => {
@@ -10,29 +10,34 @@ export const Header = () => {
                 <img src={ imgHead } alt="" className="header__img" />
             </div>
 
-            <nav className="menu">
-                <ul className="menu__list">
-                    <li className="menu__item">
-                        <NavLink to="/" className={ isActiveCallback }>ГОЛОВНА</NavLink>
-                    </li>
-                    
-                    <li className="menu__item">
-                        <NavLink to="/history" className={ isActiveCallback }>ІСТОРІЯ ЧАЮ</NavLink>
-                    </li>
+            <div className="header-box">
+                <nav className="menu">
+                    <ul className="menu__list">
+                        <li className="menu__item">
+                            <NavLink to="/" className={ isActiveCallback }>ГОЛОВНА</NavLink>
+                        </li>
+                        
+                        <li className="menu__item">
+                            <NavLink to="/history" className={ isActiveCallback }>ІСТОРІЯ ЧАЮ</NavLink>
+                        </li>
 
-                    <li className="menu__item">
-                        <NavLink to="/types" className={ isActiveCallback }>ВИДИ ЧАЮ</NavLink>
-                    </li>
+                        <li className="menu__item">
+                            <NavLink to="/types" className={ isActiveCallback }>ВИДИ ЧАЮ</NavLink>
+                        </li>
 
-                    <li className="menu__item">
-                        <NavLink to="/ceremony" className={ isActiveCallback }>ЧАЙНА ЦЕРЕМОНІЯ</NavLink>
-                    </li>
+                        <li className="menu__item">
+                            <NavLink to="/ceremony" className={ isActiveCallback }>ЧАЙНА ЦЕРЕМОНІЯ</NavLink>
+                        </li>
 
-                    <li className="menu__item">
-                        <NavLink to="/wisdom" className={ isActiveCallback }>МУДРІСТЬ ЧАЮ</NavLink>
-                    </li>
-                </ul>
-            </nav>
+                        <li className="menu__item">
+                            <NavLink to="/wisdom" className={ isActiveCallback }>МУДРІСТЬ ЧАЮ</NavLink>
+                        </li>
+                    </ul>
+                </nav>
+                <div className="authorization-box">
+                    <Link to={ 'login' }>Вхід</Link>
+                </div>
+            </div>
         </header>
     );
 };

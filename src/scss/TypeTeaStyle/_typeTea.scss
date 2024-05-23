@@ -77,10 +77,8 @@
 }
 
 .content-block {
+    @include vignette-text;
     text-align: center;
-    width: 57vw;
-    height: auto;
     padding: 35px;
-    background-color: #edd5a7;;
     border-radius: 15px;
 }

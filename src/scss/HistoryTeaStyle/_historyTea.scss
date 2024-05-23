@@ -9,15 +9,13 @@
 }
 
 .content-block {
-    width: 57vw;
-    height: auto;
+    @include vignette-text;
     padding: 35px;
-    background-color: #edd5a7;;
     border-radius: 15px;
 }
 
 .image {
-    width: 70vw;
+    @include vignette-wd;
 
     &__src {
         width: 100%;
