@@ -1,6 +1,5 @@
 import { HeadAnimation } from "./Head/HeadAnimation";
 import { Link, NavLink } from "react-router-dom";
-import imgHead from '../img/head.jpg';
 
 export const Header = () => {
     const isActiveCallback = ({ isActive }) => isActive ? "menu__link menu__link_active" : "menu__link";
@@ -14,6 +13,10 @@ export const Header = () => {
                     <ul className="menu__list">
                         <li className="menu__item">
                             <NavLink to="/" className={ isActiveCallback }>ГОЛОВНА</NavLink>
+                        </li>
+
+                        <li className="menu__item">
+                            <NavLink to="/shop" className={ isActiveCallback }>МАГАЗИН</NavLink>
                         </li>
                         
                         <li className="menu__item">

@@ -31,17 +31,14 @@ export const SliderTour = ({ onSkip }) => {
         }
     ];
 
-    // Функція для переходу до наступного слайду
     const nextSlide = () => {
         setCurrentSlide(currentSlide === slides.length - 1 ? 0 : currentSlide + 1);
     };
 
-    // Функція для переходу до попереднього слайду
     const prevSlide = () => {
         setCurrentSlide(currentSlide === 0 ? slides.length - 1 : currentSlide - 1);
     };
 
-    // Функція для переходу до конкретного слайду
     const goToSlide = (index) => {
         setCurrentSlide(index);
     };
@@ -50,37 +47,39 @@ export const SliderTour = ({ onSkip }) => {
         <div className="slider">
             <div className="slider__container">
                 <h3 className="slider__title">
-                    {slides[currentSlide].title.toUpperCase()}
+                    { slides[currentSlide].title.toUpperCase() }
                 </h3>
 
                 <div className="slider__content">
                     <p className="slider__description">
-                        {slides[currentSlide].description}
+                        { slides[currentSlide].description }
                     </p>
                 </div>
             </div>
 
             <div className="slider__navigation">
-                <button className="slider__prev" onClick={prevSlide}>
+                <button className="slider__prev" onClick={ prevSlide }>
                     &#10094;
                 </button>
 
                 <div className="slider__dots">
-                    {slides.map((slide, index) => (
-                        <span
-                            key={index}
-                            className={index === currentSlide ? 'slider__dot slider__dot_active' : 'slider__dot'}
-                            onClick={() => goToSlide(index)}
-                        ></span>
-                    ))}
+                    {
+                        slides.map((slide, index) => (
+                            <span
+                                key={ index }
+                                className={ index === currentSlide ? 'slider__dot slider__dot_active' : 'slider__dot' }
+                                onClick={ () => goToSlide(index) }
+                            ></span>
+                        ))
+                    }
                 </div>
 
-                <button className="slider__next" onClick={nextSlide}>
+                <button className="slider__next" onClick={ nextSlide }>
                     &#10095;
                 </button>
             </div>
 
-            <button className="slider__skip" onClick={onSkip}>
+            <button className="slider__skip" onClick={ onSkip }>
                 Пропустити
             </button>
         </div>

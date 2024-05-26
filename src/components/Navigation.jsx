@@ -52,8 +52,9 @@ export const Navigation = () => {
 
     return (
         <>
-            <div id="scrollToTopBtn" className="scroll scroll-top" ref={scrollToTopBtnRef}></div>
-            <div id="scrollToBottomBtn" className="scroll scroll-bottom" ref={scrollToBottomBtnRef}></div>
+            <div id="scrollToTopBtn" className="scroll scroll-top" ref={ scrollToTopBtnRef }></div>
+            
+            <div id="scrollToBottomBtn" className="scroll scroll-bottom" ref={ scrollToBottomBtnRef }></div>
         </>
     );
 };

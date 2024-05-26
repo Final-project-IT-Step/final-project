@@ -1,9 +1,39 @@
+import { useEffect, useRef } from 'react';
+import BgdPaper from '../../img/bgd-post.png';
+
 export const AboutPavilion = () => {
+    const bgdRef = useRef(null);
+    const aboutRef = useRef(null);
+
+    useEffect(() => {
+        const options = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate');
+                }
+            });
+        }, options);
+
+        if (bgdRef.current) observer.observe(bgdRef.current);
+        if (aboutRef.current) observer.observe(aboutRef.current);
+
+        return () => {
+            if (bgdRef.current) observer.unobserve(bgdRef.current);
+            if (aboutRef.current) observer.unobserve(aboutRef.current);
+        };
+    }, []);
+
     return (
         <div className="pavilion">
             <h1>ПРО ПАВІЛЬЙОН</h1>  
 
-            <div className="pavilion__about">
+            <img src={ BgdPaper } alt="" className="pavilion__bgd" ref={ bgdRef } />
+
+            <div className="pavilion__about" ref={ aboutRef }>
                 <p className="pavilion__about_info text">
                     Ласкаво просимо до нашого Павільйону китайської чайної церемонії, 
                     місця, де ви можете зануритися в багатовікову культуру та мистецтво 
@@ -56,3 +86,5 @@ export const AboutPavilion = () => {
         </div>
     );
 };
+
+

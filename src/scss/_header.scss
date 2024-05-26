@@ -211,6 +211,7 @@
 }  
 
 //MENU =================
+
 .header-box {
     @include flex-jc;
     position: relative;
@@ -243,7 +244,7 @@
     &__link {
         @include flex-jc;
         text-align: center;
-        font-size: 1.5vw;
+        font-size: 21px;
         padding:  15px;
         color: black;
         text-decoration: none;
@@ -262,172 +263,3 @@
     }    
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// .header {
-//     position: relative;
-//     z-index: 1;
-
-//     &__img {
-//         width: 100vw;        
-//     }
-
-//     &__site-title-wrapper {
-//         @include flex-jc;
-//         width: 100%;
-//         height: 250px;
-//         position: absolute;
-//         top: 25px;
-//         left: 0;
-//         z-index: 11;
-//         opacity: 0;
-//         animation: fadeIn 2s ease-out forwards 1s;
-//         animation-play-state: paused;
-//     }
-
-//     &__site-title {
-//         @include font-comforter-r;
-//         font-size: 150px;
-//         color: white;
-//         text-shadow: 
-//         -1px -1px 0 #573d07,  
-//         1px -1px 0 #573d07,
-//         -1px 1px 0 #573d07,
-//         1px 1px 0 #573d07,
-//         -2px -2px 0 #573d07,
-//         2px -2px 0 #573d07,
-//         -2px 2px 0 #573d07,
-//         2px 2px 0 #573d07;
-//     }
-
-//     &__img-man {
-//         height: 75%;
-//         position: absolute;
-//         bottom: 0;
-//         left: 170px;
-//         z-index: 10;
-//         animation: slideInFromLeft 2s ease-out forwards;
-//         animation-play-state: paused;
-//     }
-
-//     &__img-woman {
-//         height: 70%;
-//         position: absolute;
-//         bottom: 0;
-//         right: 170px;
-//         z-index: 10;
-//         animation: slideInFromRight 2s ease-out forwards;
-//         animation-play-state: paused;
-//     }
-
-//     &__greeting {
-//         @include flex-fd;
-//         width: 100%;
-//         height: 150px;  
-//         position: absolute; 
-//         bottom: 35%;     
-
-//         &_box {
-//             width: 370px;
-//             padding: 25px;
-//             background-color: rgba(255, 255, 255, 0.8);        
-//             border-radius: 10px;
-//             box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-//         }
-
-//         &_text {
-
-//         }
-//     }
-// }
-
-// .menu {
-//     width: 85vw;
-//     margin: 0 auto;
-//     border-top: 1px solid ;
-//     margin-top: 15px;
-//     margin-bottom: 100px;
-
-//     &__list {
-//         @include flex-jc;
-//     }
-
-//     &__link {
-//         @include flex-jc;
-//         text-align: center;
-//         font-size: 1.5vw;
-//         padding:  15px;
-//         color: black;
-//         text-decoration: none;
-//         border: 2px solid transparent;
-
-//         &:hover {
-//             border-color: $color-c;
-//         }
-        
-//         &_active {
-//             border-color: $color-c;
-//             background-color: $color-c;
-//             color: white;
-//             pointer-events: none;
-//         }
-//     }    
-// }
-
-// @keyframes slideInFromLeft {
-//     0% {
-//         transform: translateX(-100%);
-//         opacity: 1;
-//     }
-//     100% {
-//         transform: translateX(0);
-//         opacity: 1;
-//     }
-// }
-
-// @keyframes slideInFromRight {
-//     0% {
-//         transform: translateX(100%);
-//         opacity: 1;
-//     }
-//     100% {
-//         transform: translateX(0);
-//         opacity: 1;
-//     }
-// }
-
-// @keyframes fadeIn {
-//     0% {
-//         opacity: 0;
-//     }
-//     100% {
-//         opacity: 1;
-//     }
-// }

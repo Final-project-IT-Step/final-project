@@ -1,9 +1,9 @@
 import { Route, Routes } from "react-router-dom";
 import Home from "./pages/Home";
-import TeaCeremony from "./pages/TeaCeremony";
-import { HistoryTea, Page404, TypesTea, TypesTeaSinglePage, WisdomTea } from "./pages";
+import { HistoryTea, Page404, TypesTea, TypesTeaSinglePage, WisdomTea, TeaCeremony } from "./pages";
 import Layout from "./components/Layout";
 import { AuthorizationPage } from "./pages/AuthorizationPage";
+import { Shop } from "./pages/Shop";
 
 const App = () => {
 
@@ -11,6 +11,7 @@ const App = () => {
     <Routes>
       <Route path="/" element={ <Layout /> } >
         <Route index element={ <Home /> } />
+        <Route path="shop" element={ <Shop /> } />
         <Route path="history" element={ <HistoryTea /> } />
         <Route path="types/*" element={ <TypesTea /> } >
           <Route path=":id" element={ <TypesTeaSinglePage /> } />

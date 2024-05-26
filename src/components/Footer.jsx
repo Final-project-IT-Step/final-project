@@ -6,9 +6,9 @@ export const Footer = () => {
             <img src={ FooterImg } alt="" className="footer__img" />
 
             <div className="footer__contacts">
-                <h4 className="footer__contacts_title">
+                <p className="footer__contacts_title text-bold">
                     КОНТАКТНІ ДАНІ
-                </h4>
+                </p>
 
                 <p className="footer__contacts_text">
                     м. Сонячне, вул. Квіткова, 37

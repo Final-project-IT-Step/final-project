@@ -71,9 +71,9 @@
         appearance: none;
         width: 24px;
         height: 24px;
-        border: 2px solid #d4af37; /* Золотистий колір */
+        border: 2px solid #d4af37;
         border-radius: 50%;
-        background-color: #f5f5dc; /* Блідо-зелений колір */
+        background-color: #f5f5dc;
         margin-top: 5px;
         position: relative;
         cursor: url('/img/cursor-hand.png'), pointer;
@@ -119,7 +119,7 @@
             border: 2px solid #DAA520;
             border-radius: 10px;
             background: radial-gradient(circle, #FFF8DC, #DAA520);
-            transition: all 0.3s ease;
+            transition: all 1s ease;
         }
 
         &:hover {
@@ -148,9 +148,9 @@
     }
 
     &__post-text-wrapper {
-        @include flex-jc; //new-----------------------
-        width: 100%; //new-----------------------
-        height: 100%; //new-----------------------
+        @include flex-jc;
+        width: 100%;
+        height: 100%;
         position: absolute;
         top: 0;
         left: 0;

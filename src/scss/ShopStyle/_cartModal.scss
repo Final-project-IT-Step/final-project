@@ -1,0 +1,129 @@
+.modal-overlay {  
+    @include flex-jc;  
+    background: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1000;
+}
+
+.modal {
+    @include flex-fd(flex-start, center);
+    width: 750px;
+    max-width: 90%;
+    height: 500px;
+    padding: 20px;
+    background: white;    
+    border-radius: 10px;    
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);    
+    position: relative;
+
+    &__btn-close {
+        background: none;
+        border: none;
+        font-size: 25px;
+        position: absolute;
+        top: 25px;
+        right: 25px;        
+        cursor: url('/img/cursor-hand.png'), pointer;
+    }
+
+    &__wrapper {
+        height: 300px;
+        width: 700px;
+        overflow-y: scroll;
+    }
+
+    &__cart-items {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    &__cart-item {
+        display: flex;
+        align-items: center;
+        padding: 10px 0;
+        border-bottom: 1px solid #ddd;
+    }
+
+    &__img-box {
+        width: 75px;
+    }
+
+    &__img {
+        width: 75px;
+    }
+
+    &__title-tea-box {
+        width: 300px;
+        padding: 0 25px;
+    }
+
+    &__title-tea {
+        text-align: left;
+        font-weight: bold;
+    }
+
+    &__price-box {
+        width: 150px;
+        padding: 0 25px;
+    }
+
+    &__price {
+        text-align: left;
+        font-weight: bold;
+    }
+
+    &__quantity-controls {
+        display: flex;
+        align-items: center;
+    }
+
+    &__minus,
+    &__plus {
+        font-size: 20px;
+        color: white;
+        background-color: #28a745;
+        border: none;
+        border-radius: 3px;
+        padding: 0 10px;
+        margin: 0 15px;
+        cursor: url('/img/cursor-hand.png'), pointer;
+    }
+
+    &__btn-del {
+        font-size: 20px;
+        color: red;
+        background-color: white;
+        border: none;
+        border-radius: 3px;
+        padding: 0 10px;
+        margin: 0 15px;
+        cursor: url('/img/cursor-hand.png'), pointer;
+    }
+
+    &__cart-total {
+        display: flex;
+        font-size: 18px;
+        padding: 10px 0;
+    }
+
+    &__btn-buy {        
+        width: 100px;
+        padding: 10px;
+        background: #28a745;
+        border-radius: 5px;
+        border: none;
+        color: white;
+        font-size: 16px;
+        cursor: url('/img/cursor-hand.png'), pointer;
+
+        &:hover {
+            background: #218838;
+        }
+    }
+}
+

@@ -4,14 +4,14 @@ import TablewareImg from '../img/tableware.jpg'
 import { StepsTeaCeremony } from '../components/TeaCeremony/StepsTeaCeremony';
 import { Tableware } from '../components/TeaCeremony/Tableware';
 
-const TeaCeremony = () => {
+export const TeaCeremony = () => {
     return (
         <div className='main'>
             <h1>ЧАЙНА ЦЕРЕМОНІЯ</h1>
 
             <div className="tea-ceremony">
                 <div className="tea-ceremony__block">
-                    <img src="/img/vignette.png" alt="" className="tea-ceremony__img" />
+                    <img src={ process.env.PUBLIC_URL + "/img/vignette.png" } alt="" className="tea-ceremony__img" />
 
                     <p className="tea-ceremony__info text">
                         Китайська чайна церемонія має глибоке філософське та духовне значення. 
@@ -23,11 +23,11 @@ const TeaCeremony = () => {
 
                 <PrinciplesCeremony />
 
-                <img src="/img/vignette.png" alt="" className="tea-ceremony__img" />
+                <img src={ process.env.PUBLIC_URL + "/img/vignette.png" } alt="" className="tea-ceremony__img" />
 
                 <StepsTeaCeremony />
 
-                <img src="/img/vignette.png" alt="" className="tea-ceremony__img" />
+                <img src={ process.env.PUBLIC_URL + "/img/vignette.png" } alt="" className="tea-ceremony__img" />
 
                 <img src={ TablewareImg } alt="" className="tableware__img" />
 
@@ -36,5 +36,3 @@ const TeaCeremony = () => {
         </div>
     );
 };
-
-export default TeaCeremony;

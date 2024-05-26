@@ -1,0 +1,71 @@
+.filter {
+    @include flex-fd;
+
+    &__wrapper {
+        @include flex-fd(center, flex-start);
+        width: 1100px; 
+    }       
+
+    &__block {
+        display: flex;
+        width: 100%;
+        background-color: $color-i;
+        border-radius: 10px;
+        padding: 25px 50px;
+
+        &_item {
+            margin-right: 15px;
+        }
+    }
+
+    &__btn-cleaner {
+        margin: 25px 0;
+        background-color: $color-c;
+        border: none;
+        border-radius: 5px;
+        color: white;
+        padding: 10px 15px;
+        cursor: url('/img/cursor-hand.png'), pointer;
+        transition: background-color 0.3s;
+
+        &:hover {
+            background-color: #6f5740;
+        }
+    }
+}
+
+.filter-box {
+    height: 100%;
+    width: 270px;
+    background-color: #f8e6c5;
+    padding: 10px 25px;
+    border-radius: 15px;
+
+    &__info-item{
+        font-size: 15px;
+    }
+
+    &__info {
+        margin-right: 10px;
+        cursor: url('/img/cursor-hand.png'), pointer;
+    }
+}
+
+.shop-basket {
+    @include flex-jc(center, flex-start);
+    margin-left: auto;
+
+    &__img {
+        height: 100px;
+        cursor: url('/img/cursor-hand.png'), pointer;
+    }   
+    
+    &__quantity-box {
+        @include flex-jc;
+        width: 50px;
+        height: 50px;
+        font-weight: bold;
+        background-color: $color-e;
+        border-radius: 50%;
+    }
+}
