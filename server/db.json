@@ -496,8 +496,8 @@
     {
       "id": "1",
       "userId": "1",
-      "text": "Hello world1",
-      "totalLikes": 120,
+      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Rhoncus est pellentesque elit ullamcorper dignissim cras. Quam elementum pulvinar etiam non quam lacus. Eu lobortis elementum nibh tellus molestie nunc non. Aliquet nec ullamcorper sit amet risus nullam eget. Interdum velit euismod in pellentesque massa placerat duis ultricies lacus. Suspendisse sed nisi lacus sed viverra tellus in hac. Amet aliquam id diam maecenas ultricies mi. Dignissim enim sit amet venenatis urna cursus eget. Sed odio morbi quis commodo odio aenean. Ligula ullamcorper malesuada proin libero nunc consequat. Bibendum ut tristique et egestas quis ipsum suspendisAmet nulla facilisi morbi tempus iaculis. Amet porttitor eget dolor morbi non arcu risus quis. Etiam tempor orci eu lobortis elementum nibh tellus molestie nunc. Odio aenean sed adipiscing diam donec. In est ante in nibh. Integer enim neque volutpat ac tincidunt vitae. Erat velit scelerisque in dictum. Nunc sed velit dignissim sodales ut eu sem integer vitae. Et malesuada fames ac turpis egestas maecenas pharetra convallis posuere. Ut pharetra sit amet aliquam. Massa vitae tortor condimentum lacinia quis vel. Libero volutpat sed cras ornare arcu dui vivamus arcu felis. Lacus laoreet non curabitur gravida arcu ac. Tortor aliquam nulla facilisi cras fermentum odio eu feugiat pretium. Mollis aliquam ut porttitor leo a diam sollicitudin tempor id. Duis ultricies lacus sed turpis. Dictum fusce ut placerat orci. Arcu felis bibendum ut tristique et. Non consectetur a erat nam at lectus.Viverra vitae congue eu consequat. Quisque sagittis purus sit amet volutpat consequat mauris nunc congue. Nulla malesuada pellentesque elit eget gravida. At augue eget arcu dictum varius duis at consectetur lorem. Lobortis mattis aliquam faucibus purus. Urna et pharetra pharetra massa. Blandit massa enim nec dui nunc mattis enim ut. Odio ut enim blandit volutpat maecenas volutpat. Praesent elementum facilisis leo vel fringilla est ullamcorper eget. Placerat vestibulum lectus mauris ultrices. Et tortor consequat id porta nibh venenatis cras. Lobortis elementum nibh tellus molestie nunc non blandit massa enim. Fermentum odio eu feugiat pretium nibh ipsum consequat nisl. Feugiat nibh sed pulvinar proin gravida hendrerit. Nec feugiat in fermentum posuere urna nec. Eu consequat ac felis donec et odio pellentesque diam volutpat. Felis eget nunc lobortis mattis aliquam faucibus purus in massa. Vel pharetra vel turpis nunc eget.In cursus turpis massa tincidunt dui. Praesent tristique magna sit amet purus gravida quis blandit. Blandit massa enim nec dui. Tempor nec feugiat nisl pretium. Ultrices tincidunt arcu non sodales neque sodales. Ac felis donec et odio. Nibh sit amet commodo nulla facilisi nullam vehicula ipsum a. Aenean vel elit scelerisque mauris. Tellus cras adipiscing enim eu turpis. Amet cursus sit amet dictum sit. Proin libero nunc consequat interdum. Risus quis varius quam quisque id diam vel quam elementum. Id diam maecenas ultricies mi. Morbi tristique senectus et netus et. Pellentesque habitant morbi tristique senectus et netus et malesuada fames. Porttitor massa id neque aliquam vestibulum morbi. Est velit egestas dui id ornare arcu odio ut sem. Sodales neque sodales ut etiam sit amet nisl purus in. Dictum non consectetur a erat nam. Nunc non blandit massa enim.Justo eget magna fermentum iaculis eu non. Pharetra convallis posuere morbi leo. Ac placerat vestibulum lectus mauris ultrices eros in. Donec et odio pellentesque diam volutpat commodo. Et egestas quis ipsum suspendisse. Hac habitasse platea dictumst vestibulum rhoncus est. Nec nam aliquam sem et tortor consequat id porta nibh. Id neque aliquam vestibulum morbi blandit cursus risus. Scelerisque fermentum dui faucibus in ornare quam viverra orci sagittis. Et tortor consequat id porta nibh venenatis cras sed felis. Tristique senectus et netus et malesuada fames. Ullamcorper velit sed ullamcorper morbi tincidunt ornare massa eget. Sit amet risus nullam eget felis eget nunc lobortis mattis. Donec ac odio tempor orci dapibus ultrices in iaculis nunc. Faucibus in ornare quam viverra orci sagittis eu volutpat. Sociis natoque penatibus et magnis dis parturient.",
+      "totalLikes": 123,
       "totalDislikes": 10
     },
     {
@@ -511,8 +511,8 @@
       "id": "3",
       "userId": "3",
       "text": "Hello world3",
-      "totalLikes": 10,
-      "totalDislikes": 5
+      "totalLikes": 12,
+      "totalDislikes": 8
     },
     {
       "id": "4",
@@ -604,6 +604,344 @@
       "text": "Hello world4",
       "totalLikes": 10,
       "totalDislikes": 5
+    }
+  ],
+  "users": [
+    {
+      "id": "1",
+      "userPrivilege": 1,
+      "userName": "User1",
+      "email": "useremail1@gmail.com",
+      "likedComments": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "dislikedComments": [
+        "6",
+        "7",
+        "8",
+        "9"
+      ],
+      "password": "12345678",
+      "phone": "+380991112233"
+    },
+    {
+      "id": "2",
+      "userPrivilege": 2,
+      "userName": "LanaCF",
+      "email": "thisIsATestEmail@gmail.com",
+      "likedComments": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "dislikedComments": [
+        "6",
+        "7",
+        "8",
+        "9"
+      ],
+      "password": "12345678",
+      "phone": "+380991112233"
+    },
+    {
+      "id": "3",
+      "userPrivilege": 2,
+      "userName": "Hedgerock",
+      "email": "dmitriyvas21@gmail.com",
+      "likedComments": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "dislikedComments": [
+        "6",
+        "7",
+        "8",
+        "9"
+      ],
+      "password": "12345678",
+      "phone": "+380991112233"
+    },
+    {
+      "id": "4",
+      "userPrivilege": 1,
+      "userName": "User4",
+      "email": "useremail4@gmail.com",
+      "likedComments": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "dislikedComments": [
+        "6",
+        "7",
+        "8",
+        "9"
+      ],
+      "password": "12345678",
+      "phone": "+380991112233"
+    },
+    {
+      "id": "5",
+      "userPrivilege": 1,
+      "userName": "User5",
+      "email": "useremail5@gmail.com",
+      "likedComments": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "dislikedComments": [
+        "6",
+        "7",
+        "8",
+        "9"
+      ],
+      "password": "12345678",
+      "phone": "+380991112233"
+    },
+    {
+      "id": "6",
+      "userPrivilege": 1,
+      "userName": "User6",
+      "email": "useremail6@gmail.com",
+      "likedComments": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "dislikedComments": [
+        "6",
+        "7",
+        "8",
+        "9"
+      ],
+      "password": "12345678",
+      "phone": "+380991112233"
+    },
+    {
+      "id": "7",
+      "userPrivilege": 1,
+      "userName": "User7",
+      "email": "useremail7@gmail.com",
+      "likedComments": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "dislikedComments": [
+        "6",
+        "7",
+        "8",
+        "9"
+      ],
+      "password": "12345678",
+      "phone": "+380991112233"
+    },
+    {
+      "id": "8",
+      "userPrivilege": 1,
+      "userName": "User8",
+      "email": "useremail8@gmail.com",
+      "likedComments": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "dislikedComments": [
+        "6",
+        "7",
+        "8",
+        "9"
+      ],
+      "password": "12345678",
+      "phone": "+380991112233"
+    },
+    {
+      "id": "9",
+      "userPrivilege": 1,
+      "userName": "User9",
+      "email": "useremail9@gmail.com",
+      "likedComments": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "dislikedComments": [
+        "6",
+        "7",
+        "8",
+        "9"
+      ],
+      "password": "12345678",
+      "phone": "+380991112233"
+    },
+    {
+      "id": "10",
+      "userPrivilege": 1,
+      "userName": "User10",
+      "email": "useremail10@gmail.com",
+      "likedComments": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "dislikedComments": [
+        "6",
+        "7",
+        "8",
+        "9"
+      ],
+      "password": "12345678",
+      "phone": "+380991112233"
+    },
+    {
+      "id": "11",
+      "userPrivilege": 1,
+      "userName": "User11",
+      "email": "useremail11@gmail.com",
+      "likedComments": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "dislikedComments": [
+        "6",
+        "7",
+        "8",
+        "9"
+      ],
+      "password": "12345678",
+      "phone": "+380991112233"
+    },
+    {
+      "id": "12",
+      "userPrivilege": 1,
+      "userName": "User12",
+      "email": "useremail12@gmail.com",
+      "likedComments": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "dislikedComments": [
+        "6",
+        "7",
+        "8",
+        "9"
+      ],
+      "password": "12345678",
+      "phone": "+380991112233"
+    },
+    {
+      "id": "13",
+      "userPrivilege": 1,
+      "userName": "User13",
+      "email": "useremail13@gmail.com",
+      "likedComments": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "dislikedComments": [
+        "6",
+        "7",
+        "8",
+        "9"
+      ],
+      "password": "12345678",
+      "phone": "+380991112233"
+    },
+    {
+      "id": "14",
+      "userPrivilege": 1,
+      "userName": "User14",
+      "email": "useremail14@gmail.com",
+      "likedComments": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "dislikedComments": [
+        "6",
+        "7",
+        "8",
+        "9"
+      ],
+      "password": "12345678",
+      "phone": "+380991112233"
+    },
+    {
+      "id": "15",
+      "userPrivilege": 1,
+      "userName": "User15",
+      "email": "useremail15@gmail.com",
+      "likedComments": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "dislikedComments": [
+        "6",
+        "7",
+        "8",
+        "9"
+      ],
+      "password": "12345678",
+      "phone": "+380991112233"
+    },
+    {
+      "id": "16",
+      "userPrivilege": 1,
+      "userName": "User16",
+      "email": "useremail16@gmail.com",
+      "likedComments": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "dislikedComments": [
+        "6",
+        "7",
+        "8",
+        "9"
+      ],
+      "password": "12345678",
+      "phone": "+380991112233"
     }
   ]
 }
