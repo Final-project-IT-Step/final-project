@@ -1,5 +1,6 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 import { baseUrl } from "./baseUrl";
+import { basePageLength } from "./basePageLength";
 
 export const commentsTagObj = { type: 'Comments', id: 'LIST' };
 
@@ -19,7 +20,7 @@ export const commentsApi = createApi({
             ),
         }),
         getCommentsPage: build.query({
-            query: value => `comments?_start=${ value }&_limit=12`,
+            query: value => `comments?_start=${ value }&_limit=${ basePageLength }`,
             providesTags: (result) => (
                 result
                 ? [ ...result.map(( { id } ) => ( { type: 'Comments', id } )) , commentsTagObj ]

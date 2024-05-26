@@ -19,6 +19,7 @@ const App = () => {
         <Route path="ceremony" element={ <TeaCeremony /> } />
         <Route path="wisdom" element={ <WisdomTea /> } />
         <Route path="login" element={ <AuthorizationPage /> } />
+        <Route path="sign-up" element={ <AuthorizationPage /> } />
         <Route path="*" element={ <Page404 /> } />
       </Route>
     </Routes>

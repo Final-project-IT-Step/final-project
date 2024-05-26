@@ -1,3 +1,6 @@
+$f-clr: #9a8865;
+$s-clr: #edd5a7;
+
 .authorization-form {
     @include vignette-text;
     @include flex-jc;
@@ -21,7 +24,7 @@
         height: 100%;
         object-fit: cover;
 
-        border: 2px solid #9a8865;
+        border: 2px solid $f-clr;
         border-radius: 50%;
     }
 
@@ -46,17 +49,17 @@
     gap: .6rem;
     position: relative;
     width: 50%;
+    cursor: url('../../img/cursor.png'), default;
 
     &__title {
-        color: #9a8865;
+        color: $f-clr;
     }
 
     &__input {
         font-size: 1.1rem;
         width: 100%;
+        cursor: url('../../img/cursor.png'), default;
         padding: 1rem;
-
-        cursor: default;
     }
 
     &__switch-btn {
@@ -68,12 +71,12 @@
         font-size: 1.4rem;
         padding: .5rem;
         
-        cursor: pointer;
+        cursor: url('../../img/cursor-hand.png'), pointer;
     }
 
     &__input, &__switch-btn {
-        background: #9a8865;
-        color: #edd5a7;
+        background: $f-clr;
+        color: $s-clr;
         border-radius: .6rem;
         outline: none;
         border: none;
@@ -85,8 +88,8 @@
     gap: 2rem;
 
     &__button {
-        background: #9a8865;
-        color: #edd5a7;
+        background: $f-clr;
+        color: $s-clr;
         border-radius: .6rem;
         outline: none;
         border: none;
@@ -95,5 +98,6 @@
 
         width: 165px;
         font-size: 1.1rem;
+        cursor: url('../../img/cursor-hand.png'), pointer;
     }
 }
