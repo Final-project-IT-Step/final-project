@@ -4,18 +4,6 @@ import BgdPost from '../img/paper.png';
 import { useGetWisdomTeaQuery } from '../redux/wisdomTeaApi';
 
 export const WisdomTea = () => {
-    const initialWords = [
-        "мудрість",
-        "добро",
-        "чистота",
-        "щастя",
-        "гармонія",
-        "знання",
-        "спокій",  
-        "сила",
-        "терпіння",
-        "повага"
-    ];
 
     const [words, setWords] = useState([]);
     const correctWords = ["чистота", "гармонія", "спокій", "повага"];
@@ -36,6 +24,18 @@ export const WisdomTea = () => {
     };    
 
     useEffect(() => {
+        const initialWords = [
+            "мудрість",
+            "добро",
+            "чистота",
+            "щастя",
+            "гармонія",
+            "знання",
+            "спокій",  
+            "сила",
+            "терпіння",
+            "повага"
+        ];
         // Перетасовуємо
         setWords(shuffleArray([...initialWords]));
     }, []);

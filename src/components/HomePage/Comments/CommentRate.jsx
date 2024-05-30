@@ -1,22 +1,25 @@
 import { RateBox } from "./RateBox";
 import { useGetCommentManipulation } from "./hooks/useInitCommentManipulations";
 
-export const CommentRate = ({ data: item = {} }) => {
+export const CommentRate = ({ data: mainData }) => {
+    const { item, usersData } = mainData
     const { id, totalLikes, totalDislikes } = item;
-    const { initDislike, initLike } = useGetCommentManipulation();
+    const { initDislike, initLike } = useGetCommentManipulation(usersData);
 
     return (
         <div className="comment-rate">
             <RateBox 
-                data = { { currentButtonCount: totalLikes, id } } 
+                data = { { currentButtonArr: totalLikes, id, data: mainData} } 
                 currentFunction = { initLike }
+                title = "like"
             >
                 <i className="fa-solid fa-thumbs-up"></i>
             </RateBox>
 
             <RateBox 
-                data = { { currentButtonCount: totalDislikes, id } } 
+                data = { { currentButtonArr: totalDislikes, id, data: mainData } } 
                 currentFunction = { initDislike }
+                title = "dislike"
             >
                 <i className="fa-solid fa-thumbs-down"></i>
             </RateBox>

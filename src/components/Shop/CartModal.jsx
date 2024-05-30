@@ -1,10 +1,10 @@
-export const CartModal = ({ cartItems, onClose, onIncrease, onDecrease, onRemove }) => {
+export const CartModal = ({ cartItems, onClose, setIsModalOpen, onIncrease, onDecrease, onRemove, setCartItems }) => {
     const totalAmount = cartItems.reduce((total, item) => total + item.price * item.quantity, 0);
 
     return (
-        <div className="modal-overlay" onClick={ onClose }>
+        <div className="modal-overlay" onClick={ () => onClose(setIsModalOpen) }>
             <div className="modal" onClick={ (e) => e.stopPropagation() }>
-                <button className="modal__btn-close" onClick={ onClose }>
+                <button className="modal__btn-close" onClick={ () => onClose(setIsModalOpen) }>
                     Х
                 </button>
 
@@ -42,7 +42,7 @@ export const CartModal = ({ cartItems, onClose, onIncrease, onDecrease, onRemove
                                             </div>   
 
                                             <div className="modal__quantity-controls">
-                                                <button onClick={ () => onDecrease(item.id) } className="modal__minus" >
+                                                <button onClick={ () => onDecrease(item.id, setCartItems) } className="modal__minus" >
                                                     -
                                                 </button>
 
@@ -50,12 +50,12 @@ export const CartModal = ({ cartItems, onClose, onIncrease, onDecrease, onRemove
                                                     { item.quantity }
                                                 </p>
 
-                                                <button onClick={ () => onIncrease(item.id) } className="modal__plus">
+                                                <button onClick={ () => onIncrease(item.id, setCartItems) } className="modal__plus">
                                                     +
                                                 </button>
                                             </div>
 
-                                            <button onClick={ () => onRemove(item.id) } className="modal__btn-del">
+                                            <button onClick={ () => onRemove(item.id, setCartItems) } className="modal__btn-del">
                                                 X
                                             </button>
                                         </li>

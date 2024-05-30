@@ -6,6 +6,9 @@ export const AboutPavilion = () => {
     const aboutRef = useRef(null);
 
     useEffect(() => {
+        const currentBgdRef = bgdRef.current;
+        const currentAboutRef = aboutRef.current;
+
         const options = {
             threshold: 0.1
         };
@@ -18,12 +21,12 @@ export const AboutPavilion = () => {
             });
         }, options);
 
-        if (bgdRef.current) observer.observe(bgdRef.current);
-        if (aboutRef.current) observer.observe(aboutRef.current);
+        if (currentBgdRef) observer.observe(currentBgdRef);
+        if (currentAboutRef) observer.observe(currentAboutRef);
 
         return () => {
-            if (bgdRef.current) observer.unobserve(bgdRef.current);
-            if (aboutRef.current) observer.unobserve(aboutRef.current);
+            if (currentBgdRef) observer.unobserve(currentBgdRef);
+            if (currentAboutRef) observer.unobserve(currentAboutRef);
         };
     }, []);
 

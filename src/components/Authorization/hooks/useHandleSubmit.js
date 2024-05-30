@@ -1,12 +1,15 @@
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import { useGetUsersQuery } from "../../../redux/usersApi";
-import { useAuthContext } from "../../../hooks/useAuthContext";
+import { useAuthContext } from "../../../AuthorizationContext/hooks/useAuthContext";
 
 export const useHandleSubmit = () => {
 
     const { data: users = [] } = useGetUsersQuery();
     const navigate = useNavigate();
+    const { state } = useLocation();
     const { signIn } = useAuthContext();
+
+    const currentPath = state?.from + state?.searchParams || '/'
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -26,7 +29,10 @@ export const useHandleSubmit = () => {
             return
         }
 
-        signIn(currentUser.userName, () => navigate('/', { replace: true }))
+        signIn(currentUser, () => {
+            navigate(currentPath, { replace: true })
+            localStorage.setItem('user', currentUser.id)
+        })
     }
 
     return { handleSubmit }

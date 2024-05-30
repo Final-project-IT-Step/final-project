@@ -21,8 +21,8 @@ $s-clr: #9a8865;
     gap: 2rem;
 
     border-radius: .6rem;
-    max-height: 550px;
-    min-height: 550px;
+    max-height: 650px;
+    min-height: 650px;
     overflow-y: auto;
 
     &::-webkit-scrollbar {
@@ -56,6 +56,20 @@ $s-clr: #9a8865;
 
     gap: 2rem;
 
+    &.my-comment {
+        border: 2px solid #9a8865;
+        position: relative;
+
+        &::before {
+            content: 'Ваш коментар';
+
+            position: absolute;
+            top: -20px;
+            right: 0;
+            color: #9a8865;
+        }
+    }
+
     &-box {
         @include flex-jc(flex-start);
         flex-direction: column;
@@ -87,7 +101,7 @@ $s-clr: #9a8865;
         }
     
         &::-webkit-scrollbar-thumb {
-            background: #ffc157;
+            background: #5d4111;
         }
     
         &::-webkit-scrollbar,
@@ -104,6 +118,7 @@ $s-clr: #9a8865;
         position: absolute;
         top: 19px;
         left: 10px;
+        color: $s-clr;
 
         &::after {
             content: attr(data-title);
@@ -150,6 +165,11 @@ $s-clr: #9a8865;
         background: #9a8865;
         color: #edd5a7;
         cursor: url('../../img/cursor-hand.png'), pointer;
+
+        &_like.liked,
+        &_dislike.disliked {
+            color: #f3ab1a;
+        }
     }
 }
 

@@ -1,61 +1,28 @@
-import React, { useState } from 'react';
-import { Link, useSearchParams } from 'react-router-dom';
+import React from 'react';
+import { Link } from 'react-router-dom';
 import { ProductsBlock } from '../components/Shop/ProductsBlock';
 import { useGetShopTeaQuery } from '../redux/shopTeaApi';
 import { TypeSelection } from '../components/Shop/TypeSelection';
-import { useGetUpdatedData } from '../hooks/useGetUpdatedData';
 import { CountrySelection } from '../components/Shop/CountrySelection';
 import { FormSelection } from '../components/Shop/FormSelection';
 import { CartModal } from '../components/Shop/CartModal';
 import Basket from '../img/basket.png';
+import { useGetUpdatedData } from '../components/Shop/hooks/useGetUpdatedData';
+import { useTakeProductManipulation } from '../components/Shop/hooks/useTakeProductManipulation';
+import { handleAddToCart, handleCloseModal, handleDecrease, handleIncrease, handleRemove } from '../components/Shop/utils';
 
 export const Shop = () => {
+    const { 
+        searchParams, 
+        setSearchParams,
+        setIsModalOpen,
+        setCartItems, 
+        cartItems, 
+        isModalOpen } = useTakeProductManipulation();
+
     const { data = [], error, isLoading } = useGetShopTeaQuery();
-    const [searchParams, setSearchParams] = useSearchParams();
     const { filteredData } = useGetUpdatedData(data, searchParams);
-    const [cartItems, setCartItems] = useState([]);
-    const [isModalOpen, setIsModalOpen] = useState(false);
 
-    const handleAddToCart = (tea) => {
-        setCartItems(prevItems => {
-            const existingItem = prevItems.find(item => item.id === tea.id);
-            if (existingItem) {
-                return prevItems.map(item =>
-                    item.id === tea.id ? { ...item, quantity: item.quantity + 1 } : item
-                );
-            } else {
-                return [...prevItems, { ...tea, quantity: 1 }];
-            }
-        });
-    };
-
-    const handleIncrease = (id) => {
-        setCartItems(prevItems =>
-            prevItems.map(item =>
-                item.id === id ? { ...item, quantity: item.quantity + 1 } : item
-            )
-        );
-    };
-
-    const handleDecrease = (id) => {
-        setCartItems(prevItems =>
-            prevItems.map(item =>
-                item.id === id ? { ...item, quantity: Math.max(item.quantity - 1, 1) } : item
-            )
-        );
-    };
-
-    const handleRemove = (id) => {
-        setCartItems(prevItems => prevItems.filter(item => item.id !== id));
-    };
-
-    const handleOpenModal = () => {
-        setIsModalOpen(true);
-    };
-
-    const handleCloseModal = () => {
-        setIsModalOpen(false);
-    };
 
     if (isLoading) {
         return <p>Дані завантажуються...</p>;
@@ -101,9 +68,9 @@ export const Shop = () => {
                     </div>
 
                     <div className="shop-basket">
-                        <a href="#" className="shop-basket__link" onClick={ handleOpenModal }>
+                        <Link to = "#" className="shop-basket__link" onClick={ () => setIsModalOpen(prev => !prev) }>
                             <img src={ Basket } alt="" className="shop-basket__img" />
-                        </a>
+                        </Link>
 
                         <div className="shop-basket__quantity-box">
                             <p className="shop-basket__quantity">{ cartItems.reduce((total, item) => total + item.quantity, 0) }</p>
@@ -126,7 +93,7 @@ export const Shop = () => {
                     </p>
                 </div>
 
-                <ProductsBlock data={ filteredData } onAddToCart={ handleAddToCart } />
+                <ProductsBlock data={ filteredData } onAddToCart={ handleAddToCart } setCartItems = { setCartItems }/>
             </div>
 
             {
@@ -134,6 +101,8 @@ export const Shop = () => {
                     <CartModal
                         cartItems={ cartItems }
                         onClose={ handleCloseModal }
+                        setIsModalOpen={ setIsModalOpen }
+                        setCartItems = { setCartItems }
                         onIncrease={ handleIncrease }
                         onDecrease={ handleDecrease }
                         onRemove={ handleRemove }
