@@ -1,0 +1,147 @@
+$f-color: #9a8865;
+$s-color: #edd5a7;
+
+.profile {
+    @include flex-jc;
+    padding: 1rem;
+
+    border: 2px solid $f-color;
+    border-radius: 1rem;
+
+    width: 100%;
+}
+
+.profile-header {
+    @include flex-jc(flex-start);
+    gap: 4.5rem;
+
+    width: 100%;
+
+    &__change-btn {
+        border: 2px solid $f-color;
+        border-radius: .5rem;
+        padding: .5rem 1rem;
+        color: $f-color;
+        font-weight: bold;
+        font-size: 1.3rem;
+
+        cursor: url('../../img/cursor-hand.png'), pointer;
+
+        background: $s-color;
+
+        transition: background .3s, color .3s;
+
+        &:hover {
+            background: $f-color;
+            color: $s-color;
+        }
+    }
+}
+
+.profile-avatar {
+    @include flex-jc;
+    position: relative;
+
+    width: 200px;
+    height: 200px;
+
+    border-radius: 50%;
+
+    border: 3px solid $s-color;
+    background: $f-color;
+
+    & span {
+        color: $s-color;
+        font-size: 3rem;
+    }
+
+    &::after {
+        content: attr(data-privilege);
+        position: absolute;
+        bottom: -10px;
+        left: 50%;
+
+        transform: translateX(-50%);
+
+        color: $f-color;
+        font-size: 1.2rem;
+        border: 2px solid $f-color;
+        border-radius: .2rem;
+        background: $s-color;
+
+        width: 150px;
+
+        text-align: center;
+    }
+}
+
+.profile-info-list {
+    padding: .5rem;
+    border: 3px solid $f-color;
+    background: $s-color;
+    border-radius: .6rem;
+
+    @include flex-jc(center, flex-start);
+
+    gap: 1rem;
+
+    &__element {
+        @include flex-jc(center, flex-start);
+        flex-direction: column;
+
+        position: relative;
+
+        border: 2px solid $f-color;
+        border-radius: 1rem;
+        padding: .5rem;
+        min-width: 300px;
+    }
+
+    &__title {
+        width: 220px;
+
+        text-align: start;
+        margin: 0;
+
+        color: $f-color;
+
+        padding: .6rem;
+    }
+
+    &__value {
+        border: 2px solid $s-color;
+        border-radius: .6rem;
+        background: $f-color;
+        color: $s-color;
+
+        padding: .5rem 1rem;
+
+        min-width: 250px;
+
+        font-size: 1.2rem;
+    }
+
+    &__edit-btn {
+        position: absolute;
+        top: 2.5px;
+        right: 2.5px;
+
+        padding: .1rem .6rem;
+
+        color: $f-color;
+        border: 1px solid $f-color;
+        border-radius: .8rem;
+        background: none;
+
+        font-weight: bold;
+
+        cursor: url('../../img/cursor-hand.png'), pointer;
+
+        transition: background .3s, color .3s;
+
+        &:hover {
+            background: $f-color;
+            color: $s-color;
+        }
+    }
+}

@@ -1,6 +1,6 @@
 import React from 'react';
 
-export const ProductsBlock = ({ data = [], onAddToCart }) => {
+export const ProductsBlock = ({ data = [], onAddToCart, setCartItems }) => {
     if (!data.length) {
         return <p>Немає товарів для відображення.</p>;
     }
@@ -73,7 +73,7 @@ export const ProductsBlock = ({ data = [], onAddToCart }) => {
                             </p>
 
                             <div className="shop-tea__add-to-cart">
-                                <button className="shop-tea__add-to-cart_btn" onClick={ () => onAddToCart(tea) }>
+                                <button className="shop-tea__add-to-cart_btn" onClick={ () => onAddToCart(tea, setCartItems) }>
                                     Додати в кошик
                                 </button>
                             </div>

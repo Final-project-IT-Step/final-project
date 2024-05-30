@@ -28,22 +28,73 @@ export const commentsApi = createApi({
             ),
         }),
         likeComment: build.mutation({
-            query: ({ id, totalLikes }) => ({
-                url: `comments/${ id }`,
-                method: 'PATCH',
-                body: { totalLikes: totalLikes + 1 }
-            }),
+            query: ({ id, userId, currentButtonArr }) => {
+                const totalLikes = [...currentButtonArr, userId];
+        
+                return {
+                    url: `comments/${id}`,
+                    method: 'PATCH',
+                    body: { totalLikes }
+                };
+            },
+            invalidatesTags: [commentsTagObj]
+        }),
+        removeLikeComment: build.mutation({
+            query: ({ currentButtonArr, id, userId }) => {
+                const totalLikes = currentButtonArr.filter(item => item !== userId)
+        
+                return {
+                    url: `comments/${id}`,
+                    method: 'PATCH',
+                    body: { totalLikes }
+                };
+            },
             invalidatesTags: [commentsTagObj]
         }),
         dislikeComment: build.mutation({
-            query: ({ id, totalDislikes }) => ({
-                url: `comments/${ id }`,
-                method: 'PATCH',
-                body: { totalDislikes: totalDislikes + 1 }
-            }),
+            query: ({ id, userId, currentButtonArr }) => {
+                const totalDislikes = [...currentButtonArr, userId];
+        
+                return {
+                    url: `comments/${id}`,
+                    method: 'PATCH',
+                    body: { totalDislikes }
+                };
+            },
+            invalidatesTags: [commentsTagObj]
+        }),
+        removeDislikeComment: build.mutation({
+            query: ({ currentButtonArr, id, userId }) => {
+                const totalDislikes = currentButtonArr.filter(item => item !== userId)
+        
+                return {
+                    url: `comments/${id}`,
+                    method: 'PATCH',
+                    body: { totalDislikes }
+                };
+            },
+            invalidatesTags: [commentsTagObj]
+        }),
+        writeComment: build.mutation({
+            query: ({ userId, textContent }) => {
+
+                return {
+                    url: `comments`,
+                    method: 'POST',
+                    body: { userId, text: textContent, totalLikes: [], totalDislikes: [] }
+                };
+            },
             invalidatesTags: [commentsTagObj]
         })
     }),
 });
 
-export const { useGetCommentsQuery, useGetCommentsPageQuery, useLikeCommentMutation, useDislikeCommentMutation } = commentsApi;
+export const { 
+    useGetCommentsQuery, 
+    useGetCommentsPageQuery,
+    useLikeCommentMutation, 
+    useDislikeCommentMutation, 
+    useRemoveLikeCommentMutation,
+    useRemoveDislikeCommentMutation,
+    useWriteCommentMutation
+} = commentsApi;

@@ -4,6 +4,8 @@ import { HistoryTea, Page404, TypesTea, TypesTeaSinglePage, WisdomTea, TeaCeremo
 import Layout from "./components/Layout";
 import { AuthorizationPage } from "./pages/AuthorizationPage";
 import { Shop } from "./pages/Shop";
+import { AuthRequire } from "./AuthorizationContext/hoc/AuthRequire"
+import { ProfilePage } from "./pages/Profile/ProfilePage";
 
 const App = () => {
 
@@ -11,7 +13,12 @@ const App = () => {
     <Routes>
       <Route path="/" element={ <Layout /> } >
         <Route index element={ <Home /> } />
-        <Route path="shop" element={ <Shop /> } />
+          <Route path="shop" element={ 
+            <AuthRequire>
+                <Shop /> 
+            </AuthRequire>
+            } 
+          />
         <Route path="history" element={ <HistoryTea /> } />
         <Route path="types/*" element={ <TypesTea /> } >
           <Route path=":id" element={ <TypesTeaSinglePage /> } />
@@ -20,6 +27,14 @@ const App = () => {
         <Route path="wisdom" element={ <WisdomTea /> } />
         <Route path="login" element={ <AuthorizationPage /> } />
         <Route path="sign-up" element={ <AuthorizationPage /> } />
+
+        <Route path=":username" element = { 
+          <AuthRequire>
+              <ProfilePage />
+          </AuthRequire>
+          }
+        />
+        
         <Route path="*" element={ <Page404 /> } />
       </Route>
     </Routes>
