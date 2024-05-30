@@ -13,7 +13,7 @@ export const TeaCeremony = () => {
                 <div className="tea-ceremony__block">
                     <img src={ process.env.PUBLIC_URL + "/img/vignette.png" } alt="" className="tea-ceremony__img" />
 
-                    <p className="tea-ceremony__info text">
+                    <p className="tea-ceremony__info">
                         Китайська чайна церемонія має глибоке філософське та духовне значення. 
                         Вона спрямована на досягнення внутрішнього спокою, гармонії та усвідомлення. 
                         Кожен етап церемонії має свій сенс і сприяє медитації та самопізнанню. 

@@ -29,6 +29,8 @@ export const AboutPavilion = () => {
 
     return (
         <div className="pavilion">
+            <img src={ process.env.PUBLIC_URL + "/img/vignette.png" } alt="" className="tea-ceremony__img" />
+            
             <h1>ПРО ПАВІЛЬЙОН</h1>  
 
             <img src={ BgdPaper } alt="" className="pavilion__bgd" ref={ bgdRef } />
