@@ -8,9 +8,9 @@
 
 @import './scss/navigation.scss';
 
-@import './scss/header.scss';
+@import './scss/Header/header';
 
-@import './scss/Authorization/authorization';
+@import './scss/Authorization/authorization.scss';
 
 @import './scss/Profile/profile-header';
 
@@ -33,4 +33,4 @@
 
 @import './scss/footer.scss';
 
-@import './scss/media.scss';
+@import './scss/media/media';

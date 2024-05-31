@@ -1,7 +1,7 @@
 import React from 'react';
-import { AboutPavilion } from '../components/HomePage/AboutPavilion';
-import { Events } from '../components/HomePage/Events';
 import { Comments } from '../components/HomePage/Comments';
+import { AboutPavilion } from '../components/HomePage/AboutPavilion/AboutPavilion';
+import { Events } from '../components/HomePage/Events/Events';
 
 const Home = () => {
 

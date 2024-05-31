@@ -1,0 +1,39 @@
+.authorization-form-label {
+    @include flex-jc(center, flex-start);
+    flex-direction: column;
+    gap: .6rem;
+    position: relative;
+    width: 50%;
+    cursor: url('../../img/cursor.png'), default;
+
+    &__title {
+        color: $f-clr;
+    }
+
+    &__input {
+        font-size: 1.1rem;
+        width: 100%;
+        cursor: url('../../img/cursor.png'), default;
+        padding: 1rem;
+    }
+
+    &__switch-btn {
+        position: absolute;
+        top: 76%;
+        right: -20px;
+        transform: translate(-50%, -50%);
+        width: 45px;
+        font-size: 1.4rem;
+        padding: .5rem;
+        
+        cursor: url('../../img/cursor-hand.png'), pointer;
+    }
+
+    &__input, &__switch-btn {
+        background: $f-clr;
+        color: $s-clr;
+        border-radius: .6rem;
+        outline: none;
+        border: none;
+    }
+}

@@ -1,0 +1,55 @@
+@media (max-width: 1365px) {
+    .header {
+        &__greeting-box {
+            &_woman {
+                left: 40%;
+            }
+        }
+    }
+}
+
+@media (max-width: 1235px) {}
+
+@media (max-width: 1200px) {}
+
+@media (max-width: 1150px) {
+    .header {
+        &__site-title-wrapper {
+            height: 150px;
+        }
+
+        &__greeting-box {
+            &_woman {
+                left: 35%;
+            }
+        }
+    }
+}
+
+@media (max-width: 992px) {
+    .header-box {
+        height: 70px;
+    }
+
+}
+
+@media (max-width: 930px) {
+    .header {
+        &__greeting {
+            display: none;
+        }
+    }
+
+}
+
+@media (max-width: 768px) {}
+
+@media (max-width: 650px) {}
+
+@media (max-width: 607px) {}
+
+@media (max-width: 576px) {}
+
+@media (max-width: 457px) {}
+
+@media (max-width: 355px) {}

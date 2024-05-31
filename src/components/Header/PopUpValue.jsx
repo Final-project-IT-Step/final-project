@@ -21,7 +21,8 @@ export const PopUpValue = ({ data }) => {
                         >
                             { option.title }
                         </Link>
-                    </li>))}
+                    </li>))
+                }
             </ul>
             <button
                 title = 'Вийти зі свого акаунта'

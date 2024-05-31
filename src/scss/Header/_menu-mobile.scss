@@ -1,0 +1,69 @@
+.menu-mobile {
+    display: none;
+    width: 55%;
+    height: 100%;
+    padding-top: 100px;
+    background-color: $color-e;    
+    position: fixed;
+    top: 0;
+    left: -100%;
+    z-index: 150;
+    transition: left 0.3s ease-in-out;
+
+    &.menu-mobile_open {
+        left: 0;
+    }
+
+    &__btn-close {
+        background-color: transparent;
+        border: none;
+        font-weight: bold;
+        position: absolute;
+        top: 25px;
+        left: 90%;
+        transform: translateX(-50%);
+        z-index: 151;
+        cursor: url('/img/cursor-hand.png'), pointer;
+    }
+
+    &__icon-box {
+        display: none;
+        padding-top: 25px;
+    }
+
+    &__icon {
+        display: none;
+        font-size: 24px;
+        position: absolute;
+        top: 15px;
+        left: 10vw;
+        cursor: url('/img/cursor-hand.png'), pointer;
+    }
+
+    &__list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    &__link {
+        @include flex-jc;
+        text-align: center;
+        font-size: 21px;
+        padding: 15px;
+        color: black;
+        text-decoration: none;
+        border: 2px solid transparent;
+
+        &:hover {
+            border-color: $color-c;
+        }
+        
+        &_active {
+            border-color: $color-c;
+            background-color: $color-c;
+            color: white;
+            pointer-events: none;
+        }
+    }
+}

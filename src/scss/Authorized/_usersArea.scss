@@ -1,0 +1,54 @@
+.users-area {
+    @include flex-jc;
+    width: 100%;
+    flex-direction: column;
+    
+    & button, & a {
+        font-weight: bold;
+    }
+
+    &__btn {
+        @include flex-jc(flex-end);
+        background: none;
+        border: none;
+        outline: none;
+        padding: 0 1.5rem;
+        height: 3rem;
+        border: 2px solid #9a8865;
+        color: #9a8865;
+        background: #edd5a7;
+
+        cursor: url('../../img/cursor-hand.png'), pointer;
+
+        margin-bottom: -2px;
+
+        align-self: flex-end;
+
+        transition: background .3s, color .3s;
+
+        &:hover, &_active {
+            background: #9a8865;
+            color: #edd5a7;
+        }
+    }
+
+    &__link {
+        @include flex-jc;
+
+        width: 60px;
+        height: 60px;
+
+        border: 2px solid #9a8865;
+        border-radius: 50%;
+
+        color: #9a8865;
+        cursor: url('../../img/cursor-hand.png'), pointer;
+
+        transition: background .3s, color .3s;
+
+        &:hover {
+            background: #9a8865;
+            color: #edd5a7;
+        }
+    }
+}

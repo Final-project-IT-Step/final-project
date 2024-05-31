@@ -1,0 +1,30 @@
+.pop-up-menu {
+    @include flex-jc;
+    flex-direction: column;
+    width: 100%;
+
+    &-element {
+        @include flex-jc;
+        border: 1px solid #9a8865;
+        border-radius: .5rem;
+        padding: .6rem 0;
+        width: 100%;
+        transition: background .3s, color .3s;
+        cursor: url('../../img/cursor-hand.png'), pointer;
+
+        &__link {
+            @include flex-jc;
+            color: #9a8865;
+            width: 100%;
+            height: 100%;
+        }
+
+        &:hover {
+            background: #9a8865;
+        }
+
+        &:hover &__link {
+            color: #edd5a7;
+        }
+    }
+}

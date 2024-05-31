@@ -1,8 +1,8 @@
 import React from 'react';
-import { PrinciplesCeremony } from '../components/TeaCeremony/PrinciplesCeremony';
 import TablewareImg from '../img/tableware.jpg'
 import { StepsTeaCeremony } from '../components/TeaCeremony/StepsTeaCeremony';
 import { Tableware } from '../components/TeaCeremony/Tableware';
+import { PrinciplesCeremony } from '../components/TeaCeremony/PrinciplesTeaCeremony/PrinciplesCeremony';
 
 export const TeaCeremony = () => {
     return (

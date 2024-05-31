@@ -1,0 +1,36 @@
+.profile-avatar {
+    @include flex-jc;
+    position: relative;
+
+    width: 200px;
+    height: 200px;
+
+    border-radius: 50%;
+
+    border: 3px solid $s-color;
+    background: $f-color;
+
+    & span {
+        color: $s-color;
+        font-size: 3rem;
+    }
+
+    &::after {
+        content: attr(data-privilege);
+        position: absolute;
+        bottom: -10px;
+        left: 50%;
+
+        transform: translateX(-50%);
+
+        color: $f-color;
+        font-size: 1.2rem;
+        border: 2px solid $f-color;
+        border-radius: .2rem;
+        background: $s-color;
+
+        width: 150px;
+
+        text-align: center;
+    }
+}

@@ -1,0 +1,47 @@
+.write-comment {
+    @include flex-jc;
+    flex-direction: column;
+    @include vignette-text;
+
+    gap: 2rem;
+    margin-top: .5rem;
+
+    padding:  1rem 0;
+
+    &__title {
+        color: #9a8865;
+    }
+
+    &__text {
+        resize: vertical;
+        width: 65%;
+
+        color: #edd5a7;
+        padding: .5rem 1.5rem;
+        background: #9a8865;
+        border-radius: .7rem;
+        min-height: 125px;
+
+        font-size: 1.1rem;
+
+        outline: none;
+        cursor: default;
+    }
+
+    &__link-to-login {
+        background: #9a8865;
+        color: #edd5a7;
+        padding: .5rem;
+        border-radius: .6rem;
+    }
+
+    &__btn {
+        width: 10%;
+        padding: .5rem;
+        border-radius: .6rem;
+        border: none;
+        background: #9a8865;
+        color: #edd5a7;
+        cursor: pointer;
+    }
+}

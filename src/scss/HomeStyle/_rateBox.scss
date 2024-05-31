@@ -1,0 +1,5 @@
+.rate-box {
+    @include flex-jc;
+    flex-direction: column;
+    gap: .4rem;
+}

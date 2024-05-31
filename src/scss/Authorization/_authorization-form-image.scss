@@ -1,0 +1,27 @@
+.authorization-form-image {
+    width: 200px;
+    height: 200px;
+
+    &__src {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+
+        border: 2px solid $f-clr;
+        border-radius: 50%;
+    }
+
+    &_left, &_right {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    &_left {
+        left: 30px;
+    }
+
+    &_right {
+        right: 30px;
+    }
+}

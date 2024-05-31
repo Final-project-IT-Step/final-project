@@ -1,0 +1,18 @@
+.authorization-options {
+    @include flex-jc;
+    gap: 2rem;
+
+    &__button {
+        background: $f-clr;
+        color: $s-clr;
+        border-radius: .6rem;
+        outline: none;
+        border: none;
+
+        padding: .5rem;
+
+        width: 165px;
+        font-size: 1.1rem;
+        cursor: url('../../img/cursor-hand.png'), pointer;
+    }
+}

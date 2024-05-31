@@ -1,0 +1,57 @@
+.header-pop-up {
+    @include flex-jc;
+    position: relative;
+    flex-direction: column;
+    gap: 2rem;
+
+    padding: 3rem 1rem 1rem 1rem;
+    border: 2px solid #9a8865;
+    border-bottom-left-radius: .5rem;
+    border-bottom-right-radius: .5rem;
+    width: 100%;
+    
+    background: #edd5a7;
+
+    &__close-btn {
+        @include flex-jc;
+
+        position: absolute;
+        right: 2.5px;
+        top: 2.5px;
+
+        width: 20px;
+        height: 20px;
+
+        border: 1px solid #9a8865;
+        color: #9a8865;
+        background: none;
+        border-radius: 50%;
+        cursor: url('../../img/cursor-hand.png'), pointer;
+        font-size: 1.2rem;
+
+        transition: background .3s, color .3s;
+
+        &:hover {
+            background: #9a8865;
+            color: #edd5a7;
+        }
+    }
+
+    &__leave-btn {
+        align-self: flex-end;
+        border: 1px solid #9a8865;
+        border-radius: .4rem;
+        color: #9a8865;
+        background: none;
+        padding: .5rem 1rem;
+
+        cursor: url('../../img/cursor-hand.png'), pointer;
+
+        transition: background .3s, color .3s;
+
+        &:hover {
+            background: #9a8865;
+            color: #edd5a7;
+        }
+    }
+}

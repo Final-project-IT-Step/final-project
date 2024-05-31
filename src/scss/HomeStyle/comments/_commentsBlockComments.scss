@@ -1,0 +1,28 @@
+.content-block_comments {
+    @include flex-jc(flex-start, flex-start);
+    flex-direction: column;
+    width: 100%;
+    padding: 1rem;
+
+    gap: 2rem;
+
+    border-radius: .6rem;
+    max-height: 650px;
+    min-height: 650px;
+    overflow-y: auto;
+
+    &::-webkit-scrollbar {
+        background: #edd5a7;
+        width: 10px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background: #9a8865;
+    }
+
+    &::-webkit-scrollbar,
+    &::-webkit-scrollbar-thumb {
+        border-top-right-radius: .6rem;
+        border-bottom-right-radius: .6rem;
+    }
+}

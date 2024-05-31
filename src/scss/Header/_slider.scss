@@ -1,0 +1,83 @@
+.slider {
+    @include flex-fd;    
+    width: 100%;
+    height: 350px;
+    position: absolute;
+    
+    &__container {
+        @include flex-fd (flex-start, center);
+        width: 370px;
+        height: 100%;
+        padding: 25px;
+        background-color: rgba(255, 255, 255, 0.8);        
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        opacity: 0;
+        position: absolute;
+        animation: fadeIn 1s ease-out forwards;
+    }
+
+    &__content {
+        padding: 20px;
+    }
+
+    &__description {
+        font-size: 18px;
+    }
+  
+    &__navigation {
+        position: absolute;
+        bottom: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    &__prev,
+    &__next {
+        background-color: transparent;
+        border: none;
+        font-size: 24px;
+        padding: 10px;
+        cursor: url('/img/cursor-hand.png'), pointer;
+    }
+    
+    &__dots {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 10px;
+    }
+    
+    &__dot {
+        width: 10px;
+        height: 10px;
+        background-color: #ccc;
+        border-radius: 50%;
+        margin: 0 5px;
+        cursor: url('/img/cursor-hand.png'), pointer;
+
+        &_active {
+            background-color: #333;
+        }
+    }
+    
+    &__skip {
+        background-color: #333;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        position: absolute;
+        bottom: -50px;
+        opacity: 0;
+        cursor: url('/img/cursor-hand.png'), pointer;
+        animation: fadeIn 1s ease-out forwards;
+
+        &:hover {
+            background-color: #555;
+        }
+    }
+}  
