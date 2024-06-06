@@ -1,0 +1,93 @@
+$error-clr: #cc0000;
+
+.order-form {
+    padding: 1rem;
+    @include flex-jc;
+    flex-direction: column;
+    gap: 1.5rem;
+    border-radius: .6rem;
+
+    width: 100%;
+
+    background: $s-clr;
+
+    &-label {
+        @include flex-jc(center, flex-start);
+        flex-direction: column;
+
+        width: 100%;
+        border: 2px solid $f-clr;
+        background: $s-clr;
+        border-radius: 1rem;
+        gap: .5rem;
+        padding: 1rem;
+        cursor: url('../../img/cursor.png'), default;
+
+        position: relative;
+
+        &__title {
+            margin: 0;
+            color: $f-clr;
+        }
+
+        &__input {
+            width: 100%;
+            background: $f-clr;
+            border: 2px solid $f-clr;
+            border-radius: 1rem;
+            padding: .5rem 1rem;
+            color: $s-clr;
+            outline: none;
+
+            cursor: url('../../img/cursor-hand.png'), pointer;
+
+            &::-webkit-outer-spin-button,
+            &::-webkit-inner-spin-button {
+                display: none;
+            }
+        }
+
+        &__error-message {
+            position: absolute;
+            top: 15px;
+            font-weight: bold;
+            right: 25px;
+        }
+
+        &.error {
+            border: 2px solid $error-clr;
+
+            & h3, & span {
+                color: $error-clr;
+            }
+
+            & input {
+                border: 2px solid $error-clr;
+            }
+        }
+    }
+
+    &__submit-btn {
+        align-self: flex-end;
+
+        background: $s-clr;
+        color: $f-clr;
+        border: 2px solid $f-clr;
+
+        padding: .5rem 1.5rem;
+        outline: none;
+
+        border-radius: .7rem;
+        font-size: 1.2rem;
+        font-weight: bold;
+
+        cursor: url('../../img/cursor-hand.png'), pointer;
+
+        transition: background .2s, color .2s;
+
+        &:hover {
+            color: $s-clr;
+            background: $f-clr;
+        }
+    }
+}

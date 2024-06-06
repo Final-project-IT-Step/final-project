@@ -1,0 +1,143 @@
+.my-order {
+    @include flex-jc(flex-start);
+    width: 100%;
+    gap: .5rem;
+    flex-direction: column;
+    background: $s-clr;
+    border-radius: .5rem;
+    padding: 1rem;
+    max-height: 592.5px;
+    overflow: auto;
+
+    &__total-amount {
+        background: $f-clr;
+        
+        border-radius: .6rem;
+        padding: .5rem 4rem;
+        font-size: 1.1rem;
+
+        color: $s-clr;
+
+        &::before {
+            content: 'Загальна сума вашого замовлення складає:';
+            margin-right: .4rem;
+        }
+
+        &::after{
+            content: 'грн';
+            margin-left: .4rem;
+        }
+    }
+
+    &__link {
+        border: 2px solid $f-clr;
+        background: $s-clr;
+        color: $f-clr;
+        padding: .5rem 1.5rem;
+        border-radius: .6rem;
+
+        cursor: url('../../img/cursor-hand.png'), pointer;
+
+        transition: background .2s, color .2s, border .2s;
+
+        &:hover {
+            color: $s-clr;
+            border: 2px solid $s-clr;
+            background: $f-clr;
+        }
+    }
+
+    &::-webkit-scrollbar {
+        width: 12.5px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background: $f-clr;
+    }
+
+    &::-webkit-scrollbar,
+    &::-webkit-scrollbar-thumb {
+        border-top-right-radius: .5rem;
+        border-bottom-right-radius: .5rem;
+    }
+}
+
+.product-block {
+    @include flex-jc;
+    width: 100%;
+    border: 1px solid $f-clr;
+    border-radius: 1rem;
+
+    padding: 1rem;
+    background: $s-clr;
+    gap: 1rem;
+
+    &-image {
+        width: 150px;
+        height: 150px;
+        position: relative;
+
+        &__src {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    &-info-box {
+        @include flex-jc;
+        align-self: flex-start;
+        flex-direction: column;
+        padding: 0 .5rem;
+        height: 100%;
+        width: 100%;
+        gap: 1rem;
+
+        & h3, & span {
+            background: $f-clr;
+            color: $s-clr;
+            border-radius: .3rem;
+            padding: .6rem;
+            width: 100%;
+            position: relative;
+
+            &::before {
+                content: attr(data-title);
+                margin-right: .6rem;
+
+                font-weight: bold;
+
+                text-decoration: underline;
+            }
+            &::after {
+                content: attr(data-total-weight);
+                position: absolute;
+                top: 50%;
+                right: 5px;
+                transform: translateY(-50%);
+            }
+        }
+    }
+
+    &__title {
+        margin: 0;
+    }
+}
+
+.tea-type-image {
+    position: absolute;
+
+    top: -15px;
+    left: -15px;
+    width: 45px;
+    height: 45px;
+
+    
+    &__src {
+        width: 100%;
+        height: 100%;
+
+        object-fit: cover;
+        border-radius: 50%;
+    }
+}

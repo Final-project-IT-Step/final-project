@@ -1,10 +1,10 @@
 import React from 'react';
-import { useDragAndDrop } from './hooks/useGetDragAndDrop';
-import { useGetCurrentTea } from './hooks/useGetCurrentTea';
+import { useDragAndDrop, useGetCurrentTea } from './hooks';
+
 
 export const TeaCup = ({ onDropToCup, onDropToList, selectedTea }) => {
   const { filteredData, data } = useGetCurrentTea();
-  const { isOver, drag, drop, isDragging } = useDragAndDrop({ onDropToCup, onDropToList, selectedTea, data })
+  const { isOver, drag = null, drop, isDragging = false } = useDragAndDrop({ onDropToCup, onDropToList, selectedTea, data })
   const currentData = filteredData || selectedTea
   const cupImg = process.env.PUBLIC_URL + '/' + currentData?.img
 

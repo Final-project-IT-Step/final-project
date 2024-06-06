@@ -1,7 +1,8 @@
-import { basePageLength } from "../../../redux";
+import { basePageLength } from "../../../redux/data";
 import { CommentRate } from "./CommentRate";
 import { UsersContent } from "./UsersContent";
-import { useGetUsersAndCommentsInfo } from "./hooks/useGetUsersInfo";
+import { useGetUsersAndCommentsInfo } from "./hooks";
+
 
 export const CommentsBlock = ({ start }) => {
     const startComment = start * basePageLength;

@@ -1,5 +1,6 @@
 import { PrinciplesTeaCeremonyBlock } from "./PrinciplesTeaCeremonyBlock";
 
+
 export const PrinciplesCeremony = () => {
     return (
         <div className="principles-tea-ceremony">
@@ -9,7 +10,7 @@ export const PrinciplesCeremony = () => {
 
            <PrinciplesTeaCeremonyBlock />
 
-            <div class="orb-container">
+            <div className="orb-container">
                 <div className="glowing-orb">
                     <div className="particles"></div>
                 </div>

@@ -1,5 +1,5 @@
 import { useLocation } from "react-router-dom";
-import { useGetTypeTeaQuery } from "../../../redux";
+import { useGetTypeTeaQuery } from "../../../redux/api";
 
 export const useGetCurrentTea = () => {
     const { pathname } = useLocation();

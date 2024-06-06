@@ -1,6 +1,7 @@
-import { ShopBasket } from "../ShopBasket"
-import { filteredBlockData } from "../data/filteredBlockData"
-import { ContentSelection } from "../ContentSelection"
+import { ContentSelection } from "../ContentSelection";
+import { ShopBasket } from "../ShopBasket";
+import { filteredBlockData } from "../data";
+
 
 export const FilterBlock = () => {
 

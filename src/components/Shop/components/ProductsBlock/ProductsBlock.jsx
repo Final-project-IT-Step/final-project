@@ -1,7 +1,7 @@
 import React from 'react';
-import { useShopContext } from '../../hooks/useShopContext';
-import { ShopTeaInfoBox } from './ShopTeaInfoBox';
+import { useShopContext } from '../../hooks';
 import { ShopTeaImgBox } from './ShopTeaImgBox';
+import { ShopTeaInfoBox } from './ShopTeaInfoBox';
 
 export const ProductsBlock = () => {
     const { filteredData: data = [] } = useShopContext();
@@ -14,7 +14,7 @@ export const ProductsBlock = () => {
         <div className="products-block">
             {
                 data.map(tea => (
-                    <div key={ tea.id } className="shop-tea">
+                    <div key={ tea.id } className={`shop-tea ${ tea.available <= 0 ? 'inactive' : '' }`}>
                         <ShopTeaImgBox tea = { tea }/>
                         <ShopTeaInfoBox tea = { tea }/>
                     </div>
@@ -23,5 +23,3 @@ export const ProductsBlock = () => {
         </div>
     );
 };
-
-

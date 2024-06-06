@@ -1,13 +1,13 @@
-import { useShopContext } from "../../hooks/useShopContext";
-import { calculateTotalValueWithMultiply } from "../../utils";
-import { ModalCloseBtn } from "./ModalCartItems/ModalCloseBtn";
-import { ModalWrapper } from "./ModalCartItems/ModalWrapper";
+import { Link } from "react-router-dom";
+import { useShopContext } from "../../hooks";
+import { ModalCloseBtn, ModalWrapper } from "./ModalCartItems";
+
 
 export const CartModal = () => {
 
-    const { cartItems, setIsModalOpen, handleCloseModal: onClose} = useShopContext();
-
-    const totalAmount = calculateTotalValueWithMultiply({ cartItems })
+    const { setIsModalOpen, handleCloseModal: onClose, totalAmount, cart } = useShopContext();
+    const currentTotalAmount = cart.length ? totalAmount : 0;
+    const isDisabled = !cart.length ? 'disabled' : '';
 
     return (
         <div className="modal-overlay" onClick={ () => onClose(setIsModalOpen) }>
@@ -20,14 +20,17 @@ export const CartModal = () => {
 
                 <div className="modal__cart-total">
                     <p className="modal__total-title text-bold">Загальна сума:&nbsp;</p>
-                    <p className="modal__total">{ totalAmount } грн.</p>
+                    <p className="modal__total">{ currentTotalAmount } грн.</p>
                 </div>
 
-                <button className="modal__btn-buy">
+                <Link 
+                    to = { '/order/pickup' } 
+                    className={ `modal__link-buy ${ isDisabled }`} 
+                    onClick = { () => onClose(setIsModalOpen) }
+                >
                     Купити
-                </button>
+                </Link>
             </div>
         </div>
     );
 };
-

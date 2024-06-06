@@ -1,0 +1,1 @@
+export const novaposhtaApiKey = '3b8654b29d06a98cfcecacadbb20614f'

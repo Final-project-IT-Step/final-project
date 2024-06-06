@@ -1,6 +1,7 @@
 import { Navigate, useLocation } from "react-router-dom"
-import { useAuthContext } from "../hooks/useAuthContext";
-import { getUrlAndParams } from "../../utils/getUrlAndParams"
+import { useAuthContext } from "../hooks";
+import { getUrlAndParams } from "../utils";
+
 
 export const AuthRequire = ({ children }) => {
     const { pathname } = useLocation();

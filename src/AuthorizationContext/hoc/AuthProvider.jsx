@@ -1,5 +1,5 @@
 import { createContext } from "react"
-import { useGetCurrentUser } from '../../AuthorizationContext/hooks/useGetCurrentUser'
+import { useGetCurrentUser } from "../hooks";
 
 export const AuthContext = createContext(null)
 

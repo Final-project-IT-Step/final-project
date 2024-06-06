@@ -1,30 +1,36 @@
-import { useShopContext } from "../../../hooks/useShopContext"
-import { modalCartItemData } from "../../data/modalCartItemData";
+import { useAuthContext } from "../../../../../AuthorizationContext/hooks";
+import { useGetProductsInCart, useShopContext } from "../../../hooks";
+import { modalCartItemData } from "../../data";
 import { ModalContentBox } from "./ModalContentBox";
 import { ModalQuantityControls } from "./ModalQuantityControls";
 
-export const ModalCartItems = () => {
-    
-    const { cartItems, handleRemove: onRemove, setCartItems } = useShopContext();
 
+export const ModalCartItems = () => {
+    const { cart, removeProduct: onRemove } = useShopContext();
+    const { currentUserId } = useAuthContext();
+    const { productsInCart } = useGetProductsInCart();
+    
     return (
         <ul className="modal__cart-items">
             {
-                cartItems.map(item => {
+                cart.map((item) => {
                     const { id } = item
-                    const contentCartData = modalCartItemData({ item })
-
+                    const currentProduct = productsInCart.find(product => product.id === id);
+                    const contentCartData = modalCartItemData({ item: currentProduct })
                     return (
                         <li key={ id } className="modal__cart-item">
-                            { contentCartData.map( element => <ModalContentBox key={ element.id } data={ element }/> ) }
 
-                            <ModalQuantityControls data = { item }/>
+                            { contentCartData.map(product => (
+                                <ModalContentBox data = { product } key={ product.id }/>
+                            )) }
+
+                            <ModalQuantityControls data = { item } currentProduct = { currentProduct }/>
 
                             <button 
-                                onClick={ () => onRemove(id, setCartItems) } 
+                                onClick={ () => onRemove({ currentUserId, id, cart }) } 
                                 className="modal__btn-del"
                             >
-                                X
+                                <i className="fa-solid fa-xmark"></i>
                             </button>
                         </li>
                     )

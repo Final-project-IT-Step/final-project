@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom"
+
 export const AuthorizationOptions = () => {
 
     return (
@@ -7,7 +9,7 @@ export const AuthorizationOptions = () => {
                 type = "submit"
             >Вхід
             </button>
-            <button className="authorization-options__button">Зареєструватись</button>
+            <Link className="authorization-options__button" to="/sign-up">Зареєструватись</Link>
         </div>
     )
 }

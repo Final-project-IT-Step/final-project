@@ -1,0 +1,86 @@
+.admin-modal {
+    @include flex-jc(center, flex-start);
+    flex-direction: column;
+    position: fixed;
+    gap: 2rem;
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    padding: 1rem;
+
+    background: $s-color;
+
+    width: 65%;
+    height: 450px;
+
+    z-index: 40;
+
+    & h1 {
+        text-align: center;
+        width: 100%;
+    }
+
+    & label {
+        @include flex-jc(flex-start, center);
+        width: 100%;
+        cursor: url('../../img/cursor.png'), default;
+    }
+
+
+    &-label {
+        flex-direction: column;
+        gap: .5rem;
+
+        &__value {
+            font-size: 1.5rem;
+            color: $f-color;
+        }
+
+        &__input {
+            border: 1px solid $f-color;
+            outline: none;
+
+            padding: 1rem;
+            border-radius: .6rem;
+            color: $f-color;
+            font-size: 1.5rem;
+            background: $s-color;
+
+            &_checkbox {
+                margin-left: 1.5rem;
+                width: 30px;
+                height: 30px;
+                cursor: url('../../img/cursor.png'), default;
+            }
+        }
+    }
+
+    &__button {
+        border: none;
+        outline: none;
+
+        background: $f-color;
+        color: $s-color;
+
+        font-size: 1.3rem;
+        
+        cursor: url('../../img/cursor-hand.png'), pointer;
+
+        padding: 1rem;
+
+        &_close {
+            position: absolute;
+
+            top: 0;
+            right: 0;
+        }
+
+        &:disabled {
+            opacity: .5;
+
+            cursor: url('../../img/cursor.png'), default;
+        }
+    }
+}

@@ -1,7 +1,8 @@
-import { makeCurrentAvatar } from './utils/makeCurrentAvatar'
-import { useInitUsersPopUp } from "./hooks/useInitUsersPopUp";
+import { useAuthContext } from "../../AuthorizationContext/hooks";
 import { PopUpValue } from "./PopUpValue";
-import { useAuthContext } from '../../AuthorizationContext/hooks/useAuthContext';
+import { useInitUsersPopUp } from "./hooks";
+import { makeCurrentAvatar } from "./utils";
+
 
 export const UsersPopUp = () => {
     const { user } = useAuthContext();

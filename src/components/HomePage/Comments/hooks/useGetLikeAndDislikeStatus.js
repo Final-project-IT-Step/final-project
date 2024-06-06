@@ -1,4 +1,5 @@
-import { useAuthContext } from "../../../../AuthorizationContext/hooks/useAuthContext";
+import { useAuthContext } from "../../../../AuthorizationContext/hooks";
+
 
 export const useGetLikeAndDislikeStatus = ({ data, title }) => {
     const { id:commentId, data: mainData } = data;

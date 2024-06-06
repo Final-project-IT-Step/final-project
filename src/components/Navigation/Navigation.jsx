@@ -1,5 +1,5 @@
 import React from 'react';
-import { useScrollPageRef } from './hooks/useScrollPageRef';
+import { useScrollPageRef } from './hooks';
 
 export const Navigation = () => {
     const { scrollToBottomBtnRef, scrollToTopBtnRef } = useScrollPageRef();

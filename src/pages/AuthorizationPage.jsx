@@ -1,6 +1,7 @@
 import { Vignette } from "../components/Vignette";
 import AuthPageProvider from "../components/Authorization/context/AuthPageContext"
-import { AuthorizationForm, useGetAuthContent } from "../components/Authorization";
+import { useGetAuthContent } from "../components/Authorization/hooks";
+import { AuthorizationForm } from "../components/Authorization";
 
 export const AuthorizationPage = () => {
     const 

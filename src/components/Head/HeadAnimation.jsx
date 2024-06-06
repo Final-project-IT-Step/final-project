@@ -2,11 +2,11 @@ import { useState } from 'react';
 import imgHead from '../../img/head.jpg';
 import imgMan from '../../img/man.png';
 import imgWoman from '../../img/woman.png';
-import { SliderTour } from './SliderTour/SliderTour';
-import { useGetAnimationAttr } from './hooks/useGetAnimationAttr';
-import { greetingBoxData } from './data/greetingsBoxData';
+import { useGetAnimationAttr } from './hooks';
+import { greetingBoxData } from './data';
 import { GreetingsBox } from './GreetingsBox';
-import { handleSkip } from './utils/handleSkip';
+import { SliderTour } from './SliderTour';
+import { handleSkip } from './utils';
 
 export const HeadAnimation = () => {
     const [showSlider, setShowSlider] = useState(false);

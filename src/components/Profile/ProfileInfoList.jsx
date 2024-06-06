@@ -1,5 +1,5 @@
-import { capitalizeValue } from "./utils/capitalizeValue";
-import { initUserInterface } from "./utils/initUserInterface";
+import { capitalizeValue, initUserInterface } from "./utils";
+
 
 export const ProfileInfoList = ({ currentUser, isGuest, change }) => {
     const additionalInfo = initUserInterface(currentUser, isGuest);

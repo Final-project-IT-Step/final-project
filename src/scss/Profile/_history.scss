@@ -1,0 +1,62 @@
+.history {
+    @include flex-jc;
+    flex-direction: column;
+    padding: 1rem;
+
+    width: 100%;
+
+    margin-top: 1rem;
+
+    &-block {
+        @include flex-jc(center, flex-start);
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1rem;
+
+        width: 100%;
+        background: $f-color;
+
+        &-order {
+            @include flex-jc(center, flex-start);
+            flex-direction: column;
+            gap: 1rem;
+            background: $s-color;
+            width: 100%;
+            padding: 1rem;
+            border-radius: .5rem;
+
+            &__PIB {
+                @include flex-jc;
+                gap: 1rem;
+                border: 1px solid $f-color;
+                padding: 1rem;
+                border-radius: .5rem;
+            }
+
+            &__value {
+                color: $f-color;
+
+                &::before {
+                    content: attr(data-title);
+                    margin-right: .5rem;
+                    font-size: 1.1rem;
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+}
+
+.product {
+    @include flex-jc(center, flex-start);
+    flex-direction: column;
+
+    margin-left: 1rem;
+    padding: 1rem;
+    border-radius: .7rem;
+    width: 90%;
+
+    border: 1px solid $f-color;
+
+    gap: 1rem;
+}

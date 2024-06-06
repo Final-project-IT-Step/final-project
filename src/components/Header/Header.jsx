@@ -1,11 +1,11 @@
 import React, { useState } from "react";
-import { HeadAnimation } from "../Head/HeadAnimation";
 import { Link } from "react-router-dom";
-/* import imgHead from '../../img/head.jpg'; */
+import { useAuthContext } from "../../AuthorizationContext/hooks";
+import { HeadAnimation } from "../Head/HeadAnimation";
 import { MenuList } from "./MenuList";
 import { MenuListMobile } from "./MenuListMobile";
 import { UsersPopUp } from "./UsersPopUp";
-import { useAuthContext } from "../../AuthorizationContext/hooks/useAuthContext";
+/* import imgHead from '../../img/head.jpg'; */
 
 export const Header = () => {
     const { user } = useAuthContext();
@@ -16,12 +16,12 @@ export const Header = () => {
 
     return (
         <header className="header">
-            <HeadAnimation />             
+            <HeadAnimation />
 
             <div className="header-box">
                 <nav className="menu">
                     <MenuList />
-                </nav>           
+                </nav>
 
                 <nav className={ `menu-mobile ${ menuOpen ? "menu-mobile_open" : "" }` }>
                     <MenuListMobile closeMenu={ closeMenu } />
@@ -38,6 +38,7 @@ export const Header = () => {
                         }
                     </div>
                 </div>
+
 
                 <div className="menu-mobile__icon-box">
                     <i className="fa-solid fa-bars menu-mobile__icon" onClick={ toggleMenu }></i>

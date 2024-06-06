@@ -1,5 +1,6 @@
 import { TeaCeremonyInfo } from "./TeaCeremonyInfo";
-import { teaCeremonyStepsData } from "./data/teaCeremonyStepsData";
+import { teaCeremonyStepsData } from "./data";
+
 
 export const StepsTeaCeremony = () => {
     return (

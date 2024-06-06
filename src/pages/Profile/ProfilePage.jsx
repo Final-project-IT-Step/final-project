@@ -5,10 +5,14 @@ import { useEscortToComponent } from "../../components/Authorization/hooks/useEs
 import { ProfileInfoList } from "../../components/Profile/ProfileInfoList";
 import { getUsersPrivilage } from "../../components/HomePage/Comments/utils/getUsersPrivilage";
 import { useState } from "react";
+import { Page404 } from "../Page404";
+import { History } from "../../components/Profile/History";
+import { useShopContext } from "../../components/Shop/hooks";
 
 export const ProfilePage = () => {
     const { isGuest, currentUser, isLoading, data } = useCheckUser();
     const userName = currentUser?.userName;
+    const { orders } = useShopContext();
     const currentPrivilege = getUsersPrivilage(currentUser?.userPrivilege)
     const avatar = makeCurrentAvatar(userName)
     const { destination } = useEscortToComponent(data);
@@ -21,7 +25,7 @@ export const ProfilePage = () => {
 
     if (!currentUser && !isLoading) {
         return (
-            <div className="h1">Користувача не існує :(</div>
+            <Page404 />
         )
     }   
 
@@ -44,6 +48,8 @@ export const ProfilePage = () => {
                     </button> 
                 }
             </div>
+
+            { !isGuest && orders?.length > 0 && <History />}
         </div>
     )
 }

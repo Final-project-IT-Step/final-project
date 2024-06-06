@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { useShopContext } from "../hooks/useShopContext"
+import { useShopContext } from "../hooks";
 
 export const FilterQuantity = () => {
     const { setSearchParams, filteredData } = useShopContext();

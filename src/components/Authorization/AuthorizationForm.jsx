@@ -1,10 +1,9 @@
-import { AuthorizationFormLabel } from "./hoc/AuthorizationFormLabel"
-import { AuthorizationImage } from "./AuthorizationImage"
-import { AuthorizationOptions } from "./AuthorizationOptions"
-import { SwitchButton } from "./SwitchButton"
-import { useGetAuthPageContext } from "./hooks/useGetAuthPageContext"
-import { useHandleSubmit } from "./hooks/useHandleSubmit"
-import { useEscortToComponent } from "./hooks/useEscortToComponent"
+import { AuthorizationImage } from "./AuthorizationImage";
+import { AuthorizationOptions } from "./AuthorizationOptions";
+import { SwitchButton } from "./SwitchButton";
+import { AuthorizationFormLabel } from "./hoc";
+import { useEscortToComponent, useGetAuthPageContext, useHandleSubmit } from "./hooks";
+
 
 export const AuthorizationForm = () => {
     const { currentType } = useGetAuthPageContext();

@@ -1,7 +1,7 @@
 import React from 'react';
 import { useDrag } from 'react-dnd';
 import { Link } from 'react-router-dom';
-import { getCurrentTeaLink } from '../../utils/getCurrentTeaLink';
+import { getCurrentTeaLink } from './utils';
 
 export const TypeTeaItem = ({ tea }) => {
   const { id, typeTea, img } = tea

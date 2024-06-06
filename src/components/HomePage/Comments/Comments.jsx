@@ -1,12 +1,12 @@
 import { useState } from "react";
+import { useGetCommentsQuery } from "../../../redux/api";
+import { useAuthContext } from "../../../AuthorizationContext/hooks";
+import { useScrollToTop } from "./hooks";
+import { Vignette } from "../../Vignette";
 import { CommentsBlock } from "./CommentsBlock";
 import { Pagination } from "./Pagination";
-import { useGetCommentsQuery } from "../../../redux";
-import { Vignette } from "../../Vignette";
-import { useAuthContext } from "../../../AuthorizationContext/hooks/useAuthContext";
 import { AuthWriteCommentBlock } from "./AuthWriteCommentBlock";
 import { NonAuthWriteCommentBlock } from "./NonAuthWriteCommentBlock";
-import { useScrollToTop } from "./hooks/useScrollToTop";
 
 export const Comments = () => {
     const [start, setStart] = useState(0);

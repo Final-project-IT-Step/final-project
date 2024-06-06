@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom"
 
 export const PopUpValue = ({ data }) => {
-    const { user, userSelect, leaveFromAccount, popUpHandler } = data
+    const { userSelect, leaveFromAccount, popUpHandler } = data
     
     return (
         <div className="header-pop-up">
@@ -17,7 +17,7 @@ export const PopUpValue = ({ data }) => {
                         <Link
                             onClick={ popUpHandler }
                             className="pop-up-menu-element__link"
-                            to = { user?.userName }
+                            to = { option.link }
                         >
                             { option.title }
                         </Link>

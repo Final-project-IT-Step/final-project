@@ -1,5 +1,6 @@
 import { TeaCeremonyInfo } from "./TeaCeremonyInfo";
-import { teaCeremonyInfoData } from "./data/teaCeremonyInfoData";
+import { teaCeremonyInfoData } from "./data";
+
 
 export const Tableware = () => {
     return (

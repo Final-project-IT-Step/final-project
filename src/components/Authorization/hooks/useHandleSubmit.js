@@ -1,6 +1,6 @@
 import { useLocation, useNavigate } from "react-router-dom";
-import { useGetUsersQuery } from "../../../redux/usersApi";
-import { useAuthContext } from "../../../AuthorizationContext/hooks/useAuthContext";
+import { useGetUsersQuery } from "../../../redux/api";
+import { useAuthContext } from "../../../AuthorizationContext/hooks";
 
 export const useHandleSubmit = () => {
 

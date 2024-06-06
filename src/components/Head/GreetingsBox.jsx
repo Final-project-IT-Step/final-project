@@ -4,7 +4,7 @@ export const GreetingsBox = ({ currentRef, data }) => {
 
     return (
         <div className={`header__greeting-box header__greeting-box_${ gender }`} ref={ currentRef }>
-        <p className="header__greeting-text">
+        <div className="header__greeting-text">
             <span className="text-bold text-center">
                 { titleVal.map((el, index) => (
                     <p key={ index }>{ el }</p>
@@ -13,7 +13,7 @@ export const GreetingsBox = ({ currentRef, data }) => {
             <br />
             <br />
             <p>{ text }</p>
-        </p>
+        </div>
     </div>
     )
 }

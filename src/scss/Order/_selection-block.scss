@@ -1,0 +1,84 @@
+.selection-block {
+    @include flex-jc;
+    width: 100%;
+    flex-direction: column;
+
+    gap: 2rem;
+
+    background: $s-clr;
+    border-radius: .5rem;
+    padding: 2rem 0;
+    margin-bottom: 2rem;
+
+    &__title, h4 {
+        margin: 0;
+    }
+}
+
+.options {
+    @include flex-jc(center, flex-start);
+    flex-direction: column;
+    width: 100%;
+    padding: .5rem 2rem;
+
+    gap: 2rem;
+
+    &__label {
+        @include flex-jc;
+        gap: .6rem;
+        width: 100%;
+
+        border: 2px solid $f-clr;
+        border-radius: 1rem;
+        padding: .5rem;
+
+        cursor: url('../../img/cursor-hand.png'), pointer;
+
+        &-title {
+            color: $f-clr;
+            font-size: 1.1rem;
+        }
+    }
+}
+
+.real-radio {
+    width: 0;
+    height: 0;
+    z-index: -1;
+    opacity: 0;
+    position: absolute;
+}
+
+.custom-radio {
+    display: inline-block;
+    width: 1.5rem;
+    height: 1.5rem;
+    background: $s-clr;
+    border: 2px solid $f-clr;
+    border-radius: 50%;
+    vertical-align: middle;
+    position: relative;
+}
+
+.field-element:hover .custom-radio {
+    border: 2px solid $s-clr;
+}
+
+.custom-radio::before {
+    content: "";
+    display: block;
+    height: .6rem;
+    width: .6rem;
+    background: $f-clr;
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: .2s ease-in;
+}
+
+.real-radio:checked + .custom-radio::before {
+    display: block;
+    transform: translate(-50%, -50%) scale(1);
+}

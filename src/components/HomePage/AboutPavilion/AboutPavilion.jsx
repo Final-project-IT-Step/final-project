@@ -1,8 +1,7 @@
 import BgdPaper from '../../../img/bgd-post.png';
 import { PavilionAboutInfo } from './PavilionAboutInfo';
 import { PavilionList } from './PavilionList';
-import { useGetPavilionRef } from './hooks/useGetPavilionRef';
-
+import { useGetPavilionRef } from './hooks';
 export const AboutPavilion = () => {
     const { bgdRef, aboutRef } = useGetPavilionRef();
 

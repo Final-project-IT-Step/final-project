@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useGetTypeTeaQuery } from "../../../redux";
+import { useGetTypeTeaQuery } from "../../../redux/api";
 
 export const useGetActualData = () => {
     const { data } = useGetTypeTeaQuery();

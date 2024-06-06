@@ -1,4 +1,5 @@
-import { getTotalPages } from "../../../../utils/getTotalPages";
+import { getTotalPages } from "./utils";
+
 
 export const Pagination = ({ setStart, data = [], start }) => {
     const totalPages = getTotalPages(data);

@@ -1,5 +1,5 @@
 import { NavLink } from "react-router-dom";
-import { menuElements } from "./menuElements";
+import { menuElements } from "./data";
 
 export const MenuListMobile = ({ closeMenu }) => {
     const isActiveCallback = ({ isActive }) => isActive ? "menu-mobile__link menu-mobile__link_active" : "menu-mobile__link";

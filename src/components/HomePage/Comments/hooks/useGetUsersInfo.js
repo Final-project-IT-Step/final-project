@@ -1,5 +1,6 @@
-import { useAuthContext } from "../../../../AuthorizationContext/hooks/useAuthContext";
-import { useGetCommentsPageQuery, useGetUsersQuery } from "../../../../redux";
+import { useAuthContext } from "../../../../AuthorizationContext/hooks";
+import { useGetCommentsPageQuery, useGetUsersQuery } from "../../../../redux/api";
+
 
 export const useGetUsersAndCommentsInfo = (start) => {
     const { user } = useAuthContext();

@@ -2,8 +2,3 @@ export * from './AuthorizationForm';
 export * from './AuthorizationImage';
 export * from './AuthorizationOptions';
 export * from './SwitchButton';
-export * from './context/AuthPageContext';
-export * from './hoc/AuthorizationFormLabel';
-export * from './hooks/useGetAuthContent';
-export * from './hooks/useGetAuthPageContext';
-export * from './hooks/useHandleSubmit';

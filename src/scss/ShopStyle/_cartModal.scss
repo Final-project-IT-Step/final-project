@@ -73,16 +73,32 @@
         align-items: center;
     }
 
+    &__quantity {
+        width: 40px;
+        height: 40px;
+        border: 1px solid;
+        border-radius: 50%;
+
+        @include flex-jc;
+    }
+
     &__minus,
     &__plus {
+        @include flex-jc;
         font-size: 20px;
         color: white;
         background-color: #28a745;
         border: none;
         border-radius: 3px;
-        padding: 0 10px;
+        width: 30px;
+        height: 30px;
+        padding: 5px;
         margin: 0 15px;
         cursor: url('/img/cursor-hand.png'), pointer;
+
+        &:disabled {
+            opacity: .6;
+        }
     }
 
     &__btn-del {
@@ -102,7 +118,7 @@
         padding: 10px 0;
     }
 
-    &__btn-buy {        
+    &__link-buy {        
         width: 100px;
         padding: 10px;
         background: #28a745;
@@ -111,10 +127,16 @@
         color: white;
         font-size: 16px;
         cursor: url('/img/cursor-hand.png'), pointer;
+        text-align: center;
 
         &:hover {
             background: #218838;
         }
+
+        &.disabled {
+            opacity: .5;
+            pointer-events: none;
+            position: relative;
+        }
     }
 }
-

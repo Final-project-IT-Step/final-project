@@ -1,4 +1,5 @@
-import { useShopContext } from "../../../hooks/useShopContext"
+import { useShopContext } from "../../../hooks";
+
 
 export const ModalCloseBtn = () => {
     const { handleCloseModal: onClose, setIsModalOpen } = useShopContext();
@@ -8,7 +9,7 @@ export const ModalCloseBtn = () => {
             className="modal__btn-close" 
             onClick={ () => onClose(setIsModalOpen) }
         >
-            Х
+            <i className="fa-solid fa-xmark"></i>
         </button>
     )
 }

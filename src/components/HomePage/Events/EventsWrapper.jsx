@@ -1,5 +1,6 @@
 import { EventsInfoBox } from "./EventsInfoBox"
-import { eventsArr } from "./data/eventsArr"
+import { eventsArr } from "./data"
+
 
 export const EventsWrapper = ({ eventsWrapperRef }) => {
 

@@ -1,4 +1,5 @@
-import { useGetAuthPageContext } from "./hooks/useGetAuthPageContext";
+import { useGetAuthPageContext } from "./hooks";
+
 
 export const SwitchButton = () => {
     const { switchTypeHandler, currentContent, currentTitle } = useGetAuthPageContext();

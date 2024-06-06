@@ -1,6 +1,6 @@
 import { useState } from "react";
-import { useAuthContext } from "../../../AuthorizationContext/hooks/useAuthContext";
-import { useWriteCommentMutation } from "../../../redux";
+import { useAuthContext } from "../../../AuthorizationContext/hooks";
+import { useWriteCommentMutation } from "../../../redux/api";
 
 export const AuthWriteCommentBlock = ({ comments }) => {
     const { currentUserId, user } = useAuthContext();

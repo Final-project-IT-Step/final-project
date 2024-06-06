@@ -1,0 +1,77 @@
+
+.select {
+    @include flex-jc(flex-start, flex-start);
+    align-self: flex-start;
+    width: 250px;
+    flex-direction: column;
+
+    &-dropdown {
+        @include flex-jc(flex-start);
+        border-top: 1px solid $s-clr;
+        flex-direction: column;
+        width: 100%;
+        max-height: 325px;
+        overflow: auto;
+        border-bottom-left-radius: .5rem;
+        border-bottom-right-radius: .5rem;
+
+        &__option {
+            align-self: flex-start;
+            padding: .5rem;
+            background: $s-clr;
+            color: $f-clr;
+            width: 100%;
+
+            transition: background .1s, color .1s;
+
+            &:hover {
+                background: $f-clr;
+                color: $s-clr; 
+            }
+        }
+
+        &::-webkit-scrollbar {
+            background: $s-clr;
+            width: 8px;
+        }
+    
+        &::-webkit-scrollbar-thumb {
+            background: #5d4111;
+        }
+    
+        &::-webkit-scrollbar,
+        &::-webkit-scrollbar-thumb {
+            border-bottom-right-radius: .5rem;
+        }
+    }
+
+    &__initial-value {
+        width: 100%;
+        color: $s-clr;
+
+        font-size: 1.2rem;
+        padding: .5rem;
+    }
+}
+
+.initial-value-box {
+    @include flex-jc(flex-start);
+    width: 100%;
+    background: $f-clr;
+    border-top-left-radius: .5rem;
+    border-top-right-radius: .5rem;
+    padding: 0 .5rem 0 0;
+
+    &__icon {
+        color: $s-clr;
+        &.rotated {
+            & i {
+                transform: rotate(180deg);
+            }
+        }
+    }
+
+    & i {
+        transition: all .3s;
+    }
+}

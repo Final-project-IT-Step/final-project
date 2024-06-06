@@ -1,6 +1,7 @@
-import { Vignette } from '../../Vignette';
-import { useEventWrapperRef } from './hooks/useEventWrapperRef';
-import { EventsWrapper } from './EventsWrapper';
+import { Vignette } from "../../Vignette";
+import { EventsWrapper } from "./EventsWrapper";
+import { useEventWrapperRef } from "./hooks";
+
 
 export const Events = () => {
     const { eventsWrapperRef } = useEventWrapperRef();

@@ -1,3 +1,5 @@
+@import './admin-modal';
+
 .products-block {
     display: flex;
     justify-content: flex-start;
@@ -32,6 +34,7 @@
         flex-grow: 1;
         display: flex;
         flex-direction: column;
+        position: relative;
     }
 
     &__info {
@@ -56,7 +59,62 @@
             &:hover {
                 background-color: #6f5740;
             }
+
+            &:disabled {
+                pointer-events: none;
+            }
+        }
+    }
+
+    &.inactive {
+        position: relative;
+
+        &::before {
+            content: 'Товар закінчився';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            width: 100%;
+
+            transform: translateX(-50%);
+            background: $f-color;
+            color: $s-color;
+
+            font-size: 3rem;
+            text-align: center;
+            font-weight: bold;
+
+            z-index: 10;
+
         }
     }
     
+}
+
+.admin-panel {
+    @include flex-jc;
+    gap: 1rem;
+
+    position: absolute;
+
+    width: 100%;
+    top: -45px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    background: $s-color;
+
+    padding: .5rem;
+
+    & button {
+        background: $f-color;
+        color: $s-color;
+        border: none;
+        border-radius: .5rem;
+
+        outline: none;
+        padding: .5rem;
+
+        cursor: url('../../img/cursor-hand.png'), pointer;
+    }
 }

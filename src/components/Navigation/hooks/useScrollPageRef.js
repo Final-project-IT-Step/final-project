@@ -1,6 +1,5 @@
 import { useEffect, useRef } from "react";
-import { scrollToTop } from "../utils/scrollToTop";
-import { scrollToBottom } from "../utils/scrollToBottom";
+import { scrollToBottom, scrollToTop } from "../utils";
 
 export const useScrollPageRef = () => {
     const scrollToTopBtnRef = useRef(null);
@@ -9,13 +8,17 @@ export const useScrollPageRef = () => {
     useEffect(() => {
         const scrollToTopBtn = scrollToTopBtnRef.current;
         const scrollToBottomBtn = scrollToBottomBtnRef.current;
+        const scrollTopBtnStyle = scrollToTopBtn.style
+        const scrollBottomBtnStyle = scrollToBottomBtn.style
 
         const handleScroll = () => {
             const offsetY = window.pageYOffset
-            const scrollTopBtnStyle = scrollToTopBtn.style
-            const scrollBottomBtnStyle = scrollToBottomBtn.style
+            const width = window.innerWidth;
             const scrollHeight = document.body.scrollHeight
             const innerHeight = window.innerHeight;
+            if (width <= 650) {
+                return
+            }
             
             offsetY > 450
                 ? scrollTopBtnStyle.display = 'block'
@@ -27,12 +30,25 @@ export const useScrollPageRef = () => {
 
         };
 
+        const handleResize = () => {
+            const width = window.innerWidth;
+
+            if (width <= 650) {
+                scrollTopBtnStyle.display = 'none'
+                scrollBottomBtnStyle.display = 'none'
+            } else {
+                scrollTopBtnStyle.display = 'block'
+                scrollBottomBtnStyle.display = 'block'
+            }
+        }
+
         scrollToTopBtn.style.display = 'none';
         scrollToBottomBtn.style.display = 'none';
 
         scrollToTopBtn.addEventListener('click', scrollToTop);
         scrollToBottomBtn.addEventListener('click', scrollToBottom);
         window.addEventListener('scroll', handleScroll);
+        window.addEventListener('resize', handleResize);
 
         return () => {
             scrollToTopBtn.removeEventListener('click', scrollToTop);

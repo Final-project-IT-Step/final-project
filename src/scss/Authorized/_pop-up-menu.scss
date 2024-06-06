@@ -1,6 +1,7 @@
 .pop-up-menu {
     @include flex-jc;
     flex-direction: column;
+    gap: .5rem;
     width: 100%;
 
     &-element {

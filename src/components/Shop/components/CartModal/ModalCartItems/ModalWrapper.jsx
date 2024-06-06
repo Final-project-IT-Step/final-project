@@ -1,15 +1,16 @@
-import { useShopContext } from "../../../hooks/useShopContext"
+import { useShopContext } from "../../../hooks";
 import { ModalCartItems } from "./ModalCartItems";
 
+
 export const ModalWrapper = () => {
-    const { cartItems } = useShopContext();
+    const { cart } = useShopContext();
 
     return (
         <div className="modal__wrapper">
             {
-                cartItems.length === 0 
-                ? <p className="text-center">Ви не обрали жодного товару</p>
-                : <ModalCartItems />
+                !cart.length
+                    ? <p className="text-center">Ви не обрали жодного товару</p>
+                    : <ModalCartItems />
             }
         </div>
     )

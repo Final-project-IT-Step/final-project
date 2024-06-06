@@ -1,7 +1,5 @@
 import { Link } from "react-router-dom";
-import { getUsersPrivilage } from "./utils/getUsersPrivilage";
-import { initUsersAvatar } from "./utils/initUsersAvatar";
-
+import { getUsersPrivilage, initUsersAvatar } from "./utils";
 export const UsersContent = ({ userData = {}, data:contentData = {} }) => {
     const { userName, userPrivilege } = userData
     const currentTitle = getUsersPrivilage(userPrivilege);

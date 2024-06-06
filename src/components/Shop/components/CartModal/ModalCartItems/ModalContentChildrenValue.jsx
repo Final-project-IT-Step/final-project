@@ -3,7 +3,7 @@ export const ModalContentChildrenValue = ({ data }) => {
     const value = elKey[0];
 
     return (
-        <p className={`modal__${ childrenClassName }`}>
+        <p className={childrenClassName}>
             { value }
         </p>
     )

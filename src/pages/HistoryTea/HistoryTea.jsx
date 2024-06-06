@@ -1,5 +1,5 @@
 import React from 'react';
-import { useGetHistoryTeaDataQuery } from '../../redux/historyTeaDataApi';
+import { useGetHistoryTeaDataQuery } from '../../redux/api/historyTeaDataApi';
 import { Vignette } from '../../components/Vignette';
 
 export const HistoryTea = () => {

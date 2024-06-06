@@ -4,6 +4,7 @@ $s-color: #edd5a7;
 .profile {
     @include flex-jc;
     padding: 1rem;
+    flex-direction: column;
 
     border: 2px solid $f-color;
     border-radius: 1rem;
@@ -13,11 +14,16 @@ $s-color: #edd5a7;
 
 .profile-header {
     @include flex-jc(flex-start);
+    flex-direction: column;
+    position: relative;
     gap: 4.5rem;
 
     width: 100%;
 
     &__change-btn {
+        position: absolute;
+        top: 10px;
+        right: 10px;
         border: 2px solid $f-color;
         border-radius: .5rem;
         padding: .5rem 1rem;
@@ -40,3 +46,4 @@ $s-color: #edd5a7;
 
 @import './profile-avatar';
 @import './profile-info-list';
+@import './history';

@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { getUpdatedData } from "../utils/getUpdatedData";
+import { getUpdatedData } from "../utils";
 
 export const useGetUpdatedData = (data, searchParams) => {
     const [filteredData, setFilteredData] = useState(data);

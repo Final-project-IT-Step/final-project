@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useGetCurrentUserQuery } from "../../redux";
+import { useGetCurrentUserQuery } from "../../redux/api";
 
 export const useGetCurrentUser = () => {
     const currentUserId = localStorage.getItem('user');
@@ -10,7 +10,8 @@ export const useGetCurrentUser = () => {
         if (currentUserData && !isLoading) {
             setUser(currentUserData)
         }
-    }, [currentUserData, isLoading])
+    }, [currentUserData, isLoading ])
+
 
     const signIn = (newUser, callBack) => {
         setUser(newUser);
@@ -20,7 +21,7 @@ export const useGetCurrentUser = () => {
         setUser(null);
         callBack();
     }
-    const value = { user, signIn, signOut, currentUserId }
+    const value = { user, signIn, signOut, currentUserId, setUser }
 
     return { value }
 }

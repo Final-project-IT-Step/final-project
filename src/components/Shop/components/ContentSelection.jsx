@@ -1,6 +1,7 @@
 import React from 'react';
-import { useShopContext } from '../hooks/useShopContext';
+import { useShopContext } from '../hooks';
 import { getCurrentLength, initContentSelection, initCurrentFilter, initSearchParams } from '../utils';
+
 
 export const ContentSelection = ({ currentKey: key, classNameValue, title }) => {
     const { data = [], searchParams, setSearchParams, filteredData } = useShopContext();

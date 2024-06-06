@@ -1,12 +1,10 @@
 import React from 'react';
 import { DndProvider } from 'react-dnd';
 import { HTML5Backend } from 'react-dnd-html5-backend';
-import { useGetTypeTeaQuery } from '../../redux';
-import { TypeTeaItem} from '../../components/TypeTea/TypeTeaItem';
-import { TeaCup } from '../../components/TypeTea/TeaCup';
 import { Outlet } from 'react-router-dom';
-import { useGetActualData } from '../../components/TypeTea/hooks/useGetActualData';
-import { useGetCurrentTea } from '../../components/TypeTea/hooks/useGetCurrentTea';
+import { useGetTypeTeaQuery } from '../../redux/api';
+import { useGetActualData, useGetCurrentTea } from '../../components/TypeTea/hooks';
+import { TeaCup, TypeTeaItem } from '../../components/TypeTea';
 
 export const TypesTea = () => {
     const { error, isLoading } = useGetTypeTeaQuery();
@@ -23,7 +21,7 @@ export const TypesTea = () => {
   
           <div className='type-tea__type'>
             {remainingTeas && filteredRemainingTeas.map(tea => (
-              <TypeTeaItem 
+              <TypeTeaItem
                 key={tea?.id} 
                 tea={tea}
               />
@@ -31,7 +29,7 @@ export const TypesTea = () => {
           </div>
   
           <div className='type-tea__info-wrapper'>
-            <TeaCup 
+            <TeaCup
               onDropToCup={ handleDropToCup } 
               onDropToList={ handleDropToList } 
               selectedTea={ selectedTea } 

@@ -1,8 +1,9 @@
 import { Outlet } from "react-router-dom";
+import { useCheckAuthorization } from "../AuthorizationContext/hooks";
 import { Header } from "./Header";
+import { Navigation } from "./Navigation";
 import { Footer } from "./Footer";
-import { useCheckAuthorization } from "../AuthorizationContext/hooks/useCheckAuthorization";
-import { Navigation } from "./Navigation/Navigation";
+
 
 const Layout = () => {
     useCheckAuthorization();
